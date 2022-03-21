@@ -1,0 +1,28 @@
+mark{
+  background-color: #4c566a;
+  color: #d8dee9;
+}
+
+body{
+  background-color: #3b4252;
+  color: #d8dee9;
+
+  font-family: Fira Code, Arial, sans-serif;
+}
+
+h1{
+  color: #d8dee9;
+}
+
+hr{
+  color: #d8dee9;
+}
+
+a{
+  color: #d8dee9;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('fonts/FiraCode.ttf') format('truetype');
+}
