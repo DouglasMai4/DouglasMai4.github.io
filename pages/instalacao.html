@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Instalação</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+  </head>
+  <body>
+    <hr>
+    <h1>Instalação</h1>
+    <h2>Configuração Inicial</h2>
+    <p>Para começarmos devemos mudar o estilo de teclado desta forma: <code>loadkeys br-abnt2</code><br><mark>Troque br-abnt2 para o estilo do seu teclado</mark></p>
+
+    <p>Agora vamos nos conectar a internet, alguns tutoriais desatualizados mandam utilizar wifi-menu para se conectar ao WIFI mas o Arch não vem com ele instalado por padrão por isso iremos utilizar o IWD. <br>
+    Primeiro vamos entrar no IWD: <code>iwctl</code><br>
+    Agora vamos ver a lista de redes disponiveis executando o comando: <code>iwctl wlan0 get-networks</code><br>
+    Vamos nos conectar a rede: <code>iwctl wlan0 connect NOME_DA_REDE</code>
+    <br>
+    Vamos testar se a conexão está funcionando: <code>ping google.com</code><br>
+    <mark>Troque Wlan0 pela sua placa de rede</mark>
+    <br>
+    <mark>Caso esteja conectado via cabo ignore está etapa</mark>
+    </p>
+
+    <hr>
+    <h2>Configurar Partições</h2>
+    <p>Utilize o comando: <code>fdisk -l</code> para listar todos os dispositivos conectados, é importante identificar qual HD/SSD você deseja instalar o Arch, para exemplo vamos dizer que vamos usar o disco /dev/sda</p>
+
+    <mark>O passo a seguir irá formatar o disco então só o fassa caso deseje instalar somente o Arch, sem dual boot.</mark>
+    <p>Agora acesse o seu disco utilizando: <code>fdisk /dev/sda</code> agora você pode digitar M para ver as opições disponiveis, neste caso queremos criar uma tabela GPT vazia então vamos digitar g, após isto digitamos W para salvar e sair, <strong>Lembrando que isto irá formatar o seu HD/SSD</strong></p>
+
+    <h2>Particionar</h2>
+
+    <p>Agora vamos particionar o HD/SSD, eu gosto de utilizar o CFDISK mas sinta-se a vontade para utilizar qualquer outro particionador, utilize o comando para editar as partções no disco: <code>cfdisk /dev/sda</code>, agora crie as seguintes partições:</p>
+    <dl>
+      <dt>Bios Boot</dt>
+      <dd>Partição de 512MB para boot Legacy.</dd>
+
+      <dt>EFI System</dt>
+      <dd>Partição de 512MB para EFI.</dd>
+
+      <dt>Swap</dt>
+      <dd>Recomendo 2GB para utilizar como swap do sistema (Não obrigatório)</dd>
+
+      <dt>Linux File System</dt>
+      <dd>Mais de 20GB para o / do sistema</dd>
+
+      <dt>Linux File Sistem</dt>
+      <dd>Quantidade que desejar recomendo mais de 20GB para o /home (Somente criar está partição caso deseje /home separado)</dd>
+    </dl>
+
+    <mark>Lembre de subistituir /dev/sd? para as partições que você criou!</mark>
+
+    <h2>Formatar e montar partições</h2>
+
+    <p>Agora vamos formatar as partições criadas:</p>
+    <ol>
+      <li>Boot: <code>mkfs.fat -F32 /dev/sd?</code></li>
+      <li>Barra: <code>mkfs.ext4 /dev/sd?</code></li>
+      <li>HOME(Caso use separado): <code>mkfs.ext4 /dev/sd?</code></li>
+      <li>SWAP: <code>mkswap /dev/sd?</code></li>
+    </ol>
+    <p>Agora iremos montar as partições e criar alguns diretórios:</p>
+    <ol>
+      <li>Barra: <code>mount /dev/sd? /mnt</code></li>
+      <li>Diretório: <code>mkdir /mnt/home</code></li>
+      <li>HOME: <code>mount /dev/sd? /mnt/home</code></li>
+      <li>Diretório: <code>mkdir /mnt/boot</code></li>
+      <li>Caso use EFI: <code>mkdir /mnt/boot/efi</code></li>
+      <li>Boot LEGACY: <code>mount /dev/sd? /mnt/boot</code></li>
+      <li>Boot EFI: <code>mount /dev/sd? /mnt/boot/efi</code></li>
+      <li>Swap: <code>swapon /dev/sd?</code></li>
+    </ol>
+
+    <h2>Instalar a base do sistema</h2>
+
+    <p>Para instalar a base do sistema usamos o seguinte comando:
+    <code>pacstrap /mnt base linux linux-firmware bash-completion</code><br>
+    Agora vamos gerar o fstab:
+    <code>genfstab -U -p /mnt >> /mnt/etc/fstab</code><br>
+    ferifique se foi gerado de forma correta:
+    <code>cat /mnt/etc/fstab</code></p>
+
+    <h2>Entrando no sistema instalado</h2>
+
+    <p>Para entrar no sitema use: <code>arch-chroot /mnt</code> você podera ver que seu terminal mudou isto indica que está dentro do sistema instalado.<br>
+    Vamos mudar a região do relógio para o horario de Brasilia: <code>ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime</code><br>
+    Vamos mudar para o relógio UTC: <code>hwclock --systohc</code><br>
+    Instale um editor de texto de sua preferência neste caso vou usar o nano: <code>pacman -S nano</code><br>
+    Para mudar o idioma do sistema descomente a linha que conter pt_BR.UTF-8 UTF-8 do arquivo /etc/locale.gen: <code>nano /etc/locale.gen</code><br>
+    Agora vamos atualizar o idioma: <code>locale-gen</code><br>
+    Vamos mudar a lingua padrão do sistema: <code>echo LANG=pt-BR.UTF-8 >> /etc/locale.conf</code><br>
+    Mudar o layout do teclado: <code>echo KEYMAP=br-abnt2 >> /etc/vconsole.conf</code><br>
+    Vamos mudar o nome do computador, para isso edite o arquivo /etc/hostname, depois edite o arquivo /etc/hosts e adicione as seguintes linhas:<br>
+    <code>127.0.0.1 localhost.localdomain localhost</code><br>
+    <code>::1 localhost.localdomain localhost</code><br>
+    <code>MEUHOSTNAME.localdomain MEUHOSTNAME</code><br>
+    <mark>Lembrando de trocar MEUHOSTNAME pelo nome colocado no arquivo hosts</mark></p>
+    <p>Vamos trocar a seha do root com: <code>passwd root</code><br>
+    Agora iremos adicionar um usuário: <code>useradd -m users -G whell NOME-USR</code><br>
+    Alterar senha do usuario: <code>passwd NOME-USR</code><br>
+    Vamos instalar alguns pacotes nessesários: <code>pacman -S dosfstools os-prober mtools network-manager-applet networkmanager wpa_supplicant wireless_tools dialog iwd dhcpd sudo</code><br>
+    Edite o arquivo /etc/sudoers, procure pela linha que tenha <code>root ALL=(ALL:ALL) ALL</code> e adicione abaixo dela <code>NOME-USR ALL=(ALL:ALL) ALL</code> isto fará com que seu usuário possa usar o comando sudo</p>
+
+    <h2>Instalar o GRUB</h2>
+
+    <h3>Bios Legacy</h3>
+    <code>pacman -S grub</code>
+
+    <code>grub-install --target=i386-pc --recheck /dev/sd?</code>
+
+    <code>cp /usr/share/locale/en@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo</code>
+
+    <hr>
+    <h3>EFI</h3>
+    <code>pacman -S grub-efi-x86_64 efibootmgr</code>
+
+    <code>grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Arch --recheck</code>
+
+    <code>cp /usr/share/locale/en@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo</code>
+
+    <hr>
+    <p>Agora vamos gerar o arquivo de configuração do grub: <code>grub-mkconfig -o /boot/grub/grub.cfg</code></p>
+
+    <p>Antes de reiniciar vamos preparar algumas coisas:</p>
+    <ol type="I">
+      <li>Habilitar NetworkManager: <code>systemctl enable NetworkManager</code></li>
+      <li>Habilitar dhcpd: <code>systemctl enable dhcpd</code></li>
+    </ol>
+
+    <p>Agora digite o comando: <code>exit</code> para sair e use: <code>reboot</code> para reiniciar e entrar no sistema instalado</p>
+
+    <hr>
+    <a href="pacman.html" rel="prev" title="pacman">Página Anterior</a>
+    <a href="posinstalacao.html" rel="next" title="Pós Instalação">Próxima Página</a>
+  </body>
+</html>

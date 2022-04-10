@@ -26,3 +26,25 @@ a{
   font-family: 'Fira Code';
   src: url('fonts/FiraCode.ttf') format('truetype');
 }
+
+img{
+  width: 600px;
+}
+
+table, th, td{
+        border: solid 1px #d8dee9;
+        border-collapse: collapse;
+        padding: 10px;
+}
+th{
+  text-align: center;
+}
+td{
+  text-align: center;
+}
+p{
+  max-width: 600px;
+}
+tbody#detaque:hover, tr:hover{
+  background-color: #4c566a;
+}
