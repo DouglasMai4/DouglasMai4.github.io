@@ -48,3 +48,7 @@ p{
 tbody#detaque:hover, tr:hover{
   background-color: #4c566a;
 }
+code{
+  background-color: #4c566a;
+  color: #d8dee9;
+}

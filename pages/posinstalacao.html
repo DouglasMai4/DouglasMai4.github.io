@@ -8,13 +8,22 @@
   </head>
   <body>
     <hr>
-    <h1>Pós Instalação</h1>
+    <ul>
+      <li><a href="#pos">Pós Instalação</a></li>
+      <li><a href="#wifi">Conectar ao Wifi</a></li>
+      <li><a href="#xorg">Xorg e drivers</a></li>
+    </ul>
+    <hr>
+    <h1 id="pos">Pós Instalação</h1>
 
-    <h2>Conectar ao Wifi</h2>
-    <p>Antes de usarmos o <code>iwctl</code> precisamos iniciar o iwd: <code>systemctl start iwd</code><br>
-    Agora podemos nos conectar como já haviamos feito antes com o iwctl</p>
+    <h2 id="wifi">Conectar ao Wifi</h2>
+    <p>Antes de usarmos o <em>iwctl</em></p>
 
-    <h2>Xorg e drivers</h2>
+    <p>Precisamos iniciar o <em>iwd</em>: <code>systemctl start iwd</code></p>
+
+    <p>Agora podemos nos conectar como já haviamos feito antes com o iwctl</p>
+
+    <h2 id="xorg">Xorg e drivers</h2>
     <p>Primeiro atualize a lista de pacotes: <code>pacman -Sy</code></p>
     <p>Agora vamos instalar o xorg: <code>xorg-server</code></p>
     <p>Lista dos drivers de vídeo de cada fabricante, escolha o seu e instale usando o pacman</p>
@@ -43,9 +52,11 @@
         </tr>
       </tbody>
     </table>
+
     <p>Recomendo instalar o pacote haveged para que o sistema inicie mais rápido</p>
     <hr>
-    <a href="instalacao.html" rel="prev" title="Instalação">Página Anterior</a>
-    <a href="interface.html" rel="next" title="Interface Gráfica">Próxima Página</a>
+
+    <a href="instalacao.html" target="_self" rel="prev" title="Instalação">Página Anterior</a>
+    <a href="interface.html" target="_self" rel="next" title="Interface Gráfica">Próxima Página</a>
   </body>
 </html>
