@@ -3,11 +3,21 @@
   <head>
     <meta charset="UTF-8">
     <title>Mirrorlist</title>
-    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../style.css" />
   </head>
   <body>
-    <hr>
+    <ul class="nav">
+      <li class="navli"><a href="../index.html">Home</a></li>
+      <li class="navli"><a href="download.html" target="_self" rel="next">Download</a></li>
+      <li class="navli"><a class="active" href="mirrorlist.html" target="_self">Mirrorlist</a></li>
+      <li class="navli"><a href="pacman.html" target="_self">Pacman</a></li>
+      <li class="navli"><a href="instalacao.html" target="_self">Instalação</a></li>
+      <li class="navli"><a href="posinstalacao.html" target="_self">Pós Instalação</a></li>
+      <li class="navli"><a href="interface.html" target="_self">Interface gŕafica</a></li>
+      <li class="navli" style="float:right"><a href="contato.html" target="_self">Contato</a></li>
+    </ul>
+
     <h1>Mirrorlist</h1>
 
     <p>Mirrorlist é onde fica a localização dos servidores de onde serão baixados os pacotes instalados pelo <a href="../pages/pacman.html">pacman</a> podemos alteralo de forma bem simples, executando o comando como root: <code>nano /etc/pacman.d/mirrorlist</code> (OBS: aqui irei utilizar o nano mas pode utilizar o editor que preferir), já iremos poder ver os servidores dos pacotes, para atualizar está lista podemos utilizar uma ferramenta do próprio site do Arch chamada <a href="https://archlinux.org/mirrorlist/" target="_blank" rel="nofollow">Pacman Mirrorlist Generator</a>.</p>

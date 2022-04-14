@@ -2,35 +2,28 @@ mark{
   background-color: #4c566a;
   color: #d8dee9;
 }
-
 body{
   background-color: #3b4252;
   color: #d8dee9;
 
   font-family: Fira Code, Arial, sans-serif;
 }
-
 h1{
   color: #d8dee9;
 }
-
 hr{
   color: #d8dee9;
 }
-
 a{
   color: #d8dee9;
 }
-
 @font-face {
   font-family: 'Fira Code';
   src: url('fonts/FiraCode.ttf') format('truetype');
 }
-
 img{
   width: 600px;
 }
-
 table, th, td{
         border: solid 1px #d8dee9;
         border-collapse: collapse;
@@ -51,4 +44,43 @@ tbody#detaque:hover, tr:hover{
 code{
   background-color: #4c566a;
   color: #d8dee9;
+}
+
+.nav {
+  background-color: #2E3440;
+  border: 1px solid #d8dee9;
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+.navli {
+  float: left;
+}
+
+.navli a {
+  color: #d8dee9;
+  display: block;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navli .active {
+  background-color: #d8dee9;
+  color: #2E3440;
+}
+
+.navli a:hover:not(.active) {
+  background-color: #434C5E;
+  color: #d8dee9;
+}
+
+.active {
+  background-color: #d8dee9;
+  color: #2E3440;
 }
