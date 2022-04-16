@@ -2,32 +2,58 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instalação</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../style.css" />
   </head>
   <body>
     <ul class="nav">
-      <li class="navli"><a href="../index.html">Home</a></li>
-      <li class="navli"><a href="download.html" target="_self" rel="next">Download</a></li>
-      <li class="navli"><a href="mirrorlist.html" target="_self">Mirrorlist</a></li>
-      <li class="navli"><a href="pacman.html" target="_self">Pacman</a></li>
-      <li class="navli"><a class="active" href="pages/instalacao.html" target="_self">Instalação</a></li>
-      <li class="navli"><a href="posinstalacao.html" target="_self">Pós Instalação</a></li>
-      <li class="navli"><a href="interface.html" target="_self">Interface gŕafica</a></li>
-      <li class="navli" style="float:right"><a href="contato.html" target="_self">Contato</a></li>
+      <li class="navli">
+        <a class="nava" href="../index.html">Home</a>
+      </li>
+      <li class="navli">
+        <a class="nava" href="download.html">Download</a>
+      </li>
+      <li class="navli">
+        <a class="nava" href="mirrorlist.html">Mirrorlist</a>
+      </li>
+      <li class="dropdown">
+        <a class="dropbtn" href="pacman.html">Pacman</a>
+        <div class="dropdown-content">
+          <a class="navad" href="pacman.html#historia">História</a>
+          <a class="navad" href="pacman.html#utilizar">Como Utilizar</a>
+          <a class="navad" href="pacman.html#ativar">Ativar Repositórios</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a class="dropbtna" href="instalacao.html">Instalação</a>
+        <div class="dropdown-content">
+          <a class="navad" href="instalacao.html#inicial">Configuração Inicial</a>
+          <a class="navad" href="instalacao.html#particao">Configurar Partições</a>
+          <a class="navad" href="instalacao.html#particionar">Particionar</a>
+          <a class="navad" href="instalacao.html#formatar">Formatar e Montar Partições</a>
+          <a class="navad" href="instalacao.html#install">Instalar a Base do Sistema</a>
+          <a class="navad" href="instalacao.html#entrando">Entrando no sistema instalado</a>
+          <a class="navad" href="instalacao.html#grub">Instalando Grub</a>
+        </div>
+      </li>
+      <li class="navli">
+        <a class="nava" href="posinstalacao.html">Pós Instalação</a>
+      </li>
+      <li class="dropdown">
+        <a class="dropbtn" href="interface.html">Interfaces Gráficas</a>
+        <div class="dropdown-content">
+          <a class="navad" href="interface.html#gnome">Gnome</a>
+          <a class="navad" href="interface.html#plasma">Plasma</a>
+          <a class="navad" href="interface.html#xfce">Xfce</a>
+        </div>
+      </li>
+      <li class="navli" style="float:right">
+        <a class="nava" href="contato.html">Contato</a>
+      </li>
     </ul>
 
-    <ul>
-      <li><a href="#inicial">Configuração Inicial</a></li>
-      <li><a href="#particao">Configurar Partições</a></li>
-      <li><a href="#particionar">Particionar</a></li>
-      <li><a href="#formatar">Formatar e montar partições</a></li>
-      <li><a href="#install">Instalar a base do sistema</a></li>
-      <li><a href="#entrando">Entrando no sistema instalado</a></li>
-      <li><a href="#grub">Instalar o GRUB</a></li>
-    </ul>
-    <hr>
     <h1>Instalação</h1>
     <h2 id="inicial">Configuração Inicial</h2>
     <p>Para começarmos devemos mudar o estilo de teclado desta forma: <code>loadkeys br-abnt2</code><br><mark>Troque br-abnt2 para o estilo do seu teclado</mark></p>
@@ -129,7 +155,7 @@
 
     <p>Alterar senha do usuario: <code>passwd NOME-USR</code></p>
 
-    <p>Vamos instalar alguns pacotes nessesários: <code>pacman -S dosfstools os-prober mtools network-manager-applet networkmanager wpa_supplicant wireless_tools dialog iwd dhcpd sudo</code></p>
+    <p>Vamos instalar alguns pacotes nessesários: <code>pacman -S dosfstools os-prober mtools network-manager-applet networkmanager wpa_supplicant wireless_tools dialog iwd dhcpcd sudo</code></p>
 
     <p>Edite o arquivo /etc/sudoers</p>
     <p>Procure pela linha que tenha <code>root ALL=(ALL:ALL) ALL</code></p> <p>Adicione abaixo dela <code>NOME-USR ALL=(ALL:ALL) ALL</code></p>
@@ -158,13 +184,16 @@
     <p>Antes de reiniciar vamos preparar algumas coisas:</p>
     <ol type="I">
       <li>Habilitar NetworkManager: <code>systemctl enable NetworkManager</code></li>
-      <li>Habilitar dhcpd: <code>systemctl enable dhcpd</code></li>
+      <li>Habilitar dhcpcd: <code>systemctl enable dhcpcd</code></li>
     </ol>
 
     <p>Agora digite o comando: <code>exit</code> para sair e use: <code>reboot</code> para reiniciar e entrar no sistema instalado</p>
 
-    <hr>
-    <a href="pacman.html" target="_self" rel="prev" title="pacman">Página Anterior</a>
-    <a href="posinstalacao.html" target="_self" rel="next" title="Pós Instalação">Próxima Página</a>
+    <a style="float:left" href="pacman.html" rel="prev">
+      <button class="button_ant" style="vertical-align:middle"><span>Anterior</span></button>
+    </a>
+    <a style="float:right" href="posinstalacao.html" rel="next">
+      <button class="button_prox" style="vertical-align:middle"><span>Próximo</span></button>
+    </a>
   </body>
 </html>

@@ -9,22 +9,59 @@
   </head>
   <body>
     <ul class="nav">
-      <li class="navli"><a class="active" href="index.html">Home</a></li>
-      <li class="navli"><a href="pages/download.html" target="_self" rel="next">Download</a></li>
-      <li class="navli"><a href="pages/mirrorlist.html" target="_self">Mirrorlist</a></li>
-      <li class="navli"><a href="pages/pacman.html" target="_self">Pacman</a></li>
-      <li class="navli"><a href="pages/instalacao.html" target="_self">Instalação</a></li>
-      <li class="navli"><a href="pages/posinstalacao.html" target="_self">Pós Instalação</a></li>
-      <li class="navli"><a href="pages/interface.html" target="_self">Interface gŕafica</a></li>
-      <li class="navli" style="float:right"><a href="pages/contato.html" target="_self">Contato</a></li>
+      <li class="navli">
+        <a class="activenava" href="#">Home</a>
+      </li>
+      <li class="navli">
+        <a class="nava" href="pages/download.html">Download</a>
+      </li>
+      <li class="navli">
+        <a class="nava" href="pages/mirrorlist.html">Mirrorlist</a>
+      </li>
+      <li class="dropdown">
+        <a class="dropbtn" href="pages/pacman.html">Pacman</a>
+        <div class="dropdown-content">
+          <a class="navad" href="pages/pacman.html#historia">História</a>
+          <a class="navad" href="pages/pacman.html#utilizar">Como Utilizar</a>
+          <a class="navad" href="pages/pacman.html#ativar">Ativar Repositórios</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a class="dropbtn" href="pages/instalacao.html">Instalação</a>
+        <div class="dropdown-content">
+          <a class="navad" href="pages/instalacao.html#inicial">Configuração Inicial</a>
+          <a class="navad" href="pages/instalacao.html#particao">Configurar Partições</a>
+          <a class="navad" href="pages/instalacao.html#particionar">Particionar</a>
+          <a class="navad" href="pages/instalacao.html#formatar">Formatar e Montar Partições</a>
+          <a class="navad" href="pages/instalacao.html#install">Instalar a Base do Sistema</a>
+          <a class="navad" href="pages/instalacao.html#entrando">Entrando no sistema instalado</a>
+          <a class="navad" href="pages/instalacao.html#grub">Instalando Grub</a>
+        </div>
+      </li>
+      <li class="navli">
+        <a class="nava" href="pages/posinstalacao.html">Pós Instalação</a>
+      </li>
+      <li class="dropdown">
+        <a class="dropbtn" href="pages/interface.html">Interfaces Gráficas</a>
+        <div class="dropdown-content">
+          <a class="navad" href="pages/interface.html#gnome">Gnome</a>
+          <a class="navad" href="pages/interface.html#plasma">Plasma</a>
+          <a class="navad" href="pages/interface.html#xfce">Xfce</a>
+        </div>
+      </li>
+      <li class="navli" style="float:right">
+        <a class="nava" href="pages/contato.html">Contato</a>
+      </li>
     </ul>
+
     <h1>A origem do Arch Linux</h1>
 
     <p>Foi desenvolvido originalmente pelo Canadense Judd Vinet, seu código sempre foi focado no minimalisno e simplicidade, esperando que o usuário seja quem vai trazer a coesão esperada para o sistema, ele utiliza do modelo <a href="https://diolinux.com.br/editorial/diferencas-lts-vs-rolling-release.html" target="_blank" rel="nofollow">Rolling Release</a> de lançamento, isso quer dizer que não existe "Versões" do Arch como temos em outras distribuições, a ideia é que o usuário instale uma vez e vá atualizando o sistema constantemente.</p>
 
     <p>Fonte: <a href="https://diolinux.com.br/sistemas-operacionais/arch-linux/video-conta-como-o-arch-linux-foi-criado.html#:~:text=O%20Arch%20Linux%20foi%20desenvolvido,mesmo%20espera%20para%20o%20sistema." target="_blank" rel="nofollow">Diolinux</a></p>
-    <hr>
 
-    <a href="pages/download.html" target="_self" rel="next" title="Download">Próxima Página</a>
+    <a href="pages/download.html" rel="next">
+      <button class="button_prox" style="vertical-align:middle"><span>Próximo</span></button>
+    </a>
   </body>
 </html>

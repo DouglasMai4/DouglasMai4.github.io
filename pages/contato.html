@@ -2,29 +2,82 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../style.css" />
   </head>
   <body>
     <ul class="nav">
-      <li class="navli"><a href="../index.html">Home</a></li>
-      <li class="navli"><a href="download.html" target="_self" rel="next">Download</a></li>
-      <li class="navli"><a href="mirrorlist.html" target="_self">Mirrorlist</a></li>
-      <li class="navli"><a href="pacman.html" target="_self">Pacman</a></li>
-      <li class="navli"><a href="instalacao.html" target="_self">Instalação</a></li>
-      <li class="navli"><a href="posinstalacao.html" target="_self">Pós Instalação</a></li>
-      <li class="navli"><a href="interface.html" target="_self">Interface gŕafica</a></li>
-      <li class="navli" style="float:right"><a class="active" href="contato.html" target="_self">Contato</a></li>
+      <li class="navli">
+        <a class="nava" href="../index.html">Home</a>
+      </li>
+      <li class="navli">
+        <a class="nava" href="download.html">Download</a>
+      </li>
+      <li class="navli">
+        <a class="nava" href="mirrorlist.html">Mirrorlist</a>
+      </li>
+      <li class="dropdown">
+        <a class="dropbtn" href="pacman.html">Pacman</a>
+        <div class="dropdown-content">
+          <a class="navad" href="pacman.html#historia">História</a>
+          <a class="navad" href="pacman.html#utilizar">Como Utilizar</a>
+          <a class="navad" href="pacman.html#ativar">Ativar Repositórios</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a class="dropbtn" href="instalacao.html">Instalação</a>
+        <div class="dropdown-content">
+          <a class="navad" href="instalacao.html#inicial">Configuração Inicial</a>
+          <a class="navad" href="instalacao.html#particao">Configurar Partições</a>
+          <a class="navad" href="instalacao.html#particionar">Particionar</a>
+          <a class="navad" href="instalacao.html#formatar">Formatar e Montar Partições</a>
+          <a class="navad" href="instalacao.html#install">Instalar a Base do Sistema</a>
+          <a class="navad" href="instalacao.html#entrando">Entrando no sistema instalado</a>
+          <a class="navad" href="instalacao.html#grub">Instalando Grub</a>
+        </div>
+      </li>
+      <li class="navli">
+        <a class="nava" href="posinstalacao.html">Pós Instalação</a>
+      </li>
+      <li class="dropdown">
+        <a class="dropbtn" href="interface.html">Interfaces Gráficas</a>
+        <div class="dropdown-content">
+          <a class="navad" href="interface.html#gnome">Gnome</a>
+          <a class="navad" href="interface.html#plasma">Plasma</a>
+          <a class="navad" href="interface.html#xfce">Xfce</a>
+        </div>
+      </li>
+      <li class="navli" style="float:right">
+        <a class="activenava" href="#">Contato</a>
+      </li>
     </ul>
 
-    <img src="#" alt="Imagem do criador deste site" title="Douglas Maia">
-    <ul>
-      <li><a href="https://github.com/douglasmai4" target="_blank" rel="nofollow">GitHub</a></li>
-      <li><a href="#" rel="nofollow">Email</a></li>
-      <li><a href="#" rel="nofollow">Telegram</a></li>
-    </ul>
-    <hr>
-    <a href="interface.html" target="_self" rel="prev" title="Interface Gráfica">Página Anterior</a>
+    <div>
+      <img class="perfil" style="width: 150px;" src="../img/foto.png" alt="Imagem do criador do site" title="Douglas Maia">
+
+      <ul style="list-style-type: none;">
+        <li>
+          <img style="width: 50px;" src="../img/github.png" alt="Logomarca do GitHub">
+          <a href="https://github.com/douglasmai4" target="_blank">GitHub</a>
+        </li>
+        <li>
+          <img style="width: 50px;" src="../img/telegram.png" alt="Logomarca do Telegram">
+          <a href="https://t.me/Douglas_Maia" target="_blank">Telegram</a>
+        </li>
+        <li>
+          <img style="width: 50px;" src="../img/email.png" alt="Icone de E-mail">
+          <a href="mailto:douglasmai4@protonmail.com" target="_blank">Email</a>
+        </li>
+      </ul>
+    </div>
+
+    <a style="float:left" href="interface.html" rel="prev">
+      <button class="button_ant" style="vertical-align:middle"><span>Anterior</span></button>
+    </a>
+    <a style="float:right" href="../index.html" rel="next">
+      <button class="button_prox" style="vertical-align:middle"><span>Início</span></button>
+    </a>
   </body>
 </html>

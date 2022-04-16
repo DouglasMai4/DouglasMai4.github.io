@@ -2,28 +2,58 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pacman</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../style.css" />
   </head>
   <body>
     <ul class="nav">
-      <li class="navli"><a href="../index.html">Home</a></li>
-      <li class="navli"><a href="download.html" target="_self" rel="next">Download</a></li>
-      <li class="navli"><a href="mirrorlist.html" target="_self">Mirrorlist</a></li>
-      <li class="navli"><a class="active" href="pacman.html" target="_self">Pacman</a></li>
-      <li class="navli"><a href="instalacao.html" target="_self">Instalação</a></li>
-      <li class="navli"><a href="posinstalacao.html" target="_self">Pós Instalação</a></li>
-      <li class="navli"><a href="interface.html" target="_self">Interface gŕafica</a></li>
-      <li class="navli" style="float:right"><a href="contato.html" target="_self">Contato</a></li>
+      <li class="navli">
+        <a class="nava" href="../index.html">Home</a>
+      </li>
+      <li class="navli">
+        <a class="nava" href="download.html">Download</a>
+      </li>
+      <li class="navli">
+        <a class="nava" href="mirrorlist.html">Mirrorlist</a>
+      </li>
+      <li class="dropdown">
+        <a class="dropbtna" href="#">Pacman</a>
+        <div class="dropdown-content">
+          <a class="navad" href="pacman.html#historia">História</a>
+          <a class="navad" href="pacman.html#utilizar">Como Utilizar</a>
+          <a class="navad" href="pacman.html#ativar">Ativar Repositórios</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a class="dropbtn" href="instalacao.html">Instalação</a>
+        <div class="dropdown-content">
+          <a class="navad" href="instalacao.html#inicial">Configuração Inicial</a>
+          <a class="navad" href="instalacao.html#particao">Configurar Partições</a>
+          <a class="navad" href="instalacao.html#particionar">Particionar</a>
+          <a class="navad" href="instalacao.html#formatar">Formatar e Montar Partições</a>
+          <a class="navad" href="instalacao.html#install">Instalar a Base do Sistema</a>
+          <a class="navad" href="instalacao.html#entrando">Entrando no sistema instalado</a>
+          <a class="navad" href="instalacao.html#grub">Instalando Grub</a>
+        </div>
+      </li>
+      <li class="navli">
+        <a class="nava" href="posinstalacao.html">Pós Instalação</a>
+      </li>
+      <li class="dropdown">
+        <a class="dropbtn" href="interface.html">Interfaces Gráficas</a>
+        <div class="dropdown-content">
+          <a class="navad" href="interface.html#gnome">Gnome</a>
+          <a class="navad" href="interface.html#plasma">Plasma</a>
+          <a class="navad" href="interface.html#xfce">Xfce</a>
+        </div>
+      </li>
+      <li class="navli" style="float:right">
+        <a class="nava" href="contato.html">Contato</a>
+      </li>
     </ul>
 
-    <ul>
-      <li><a href="#historia">História</a></li>
-      <li><a href="#utilizar">Como Utilizar</a></li>
-      <li><a href="#ativar">Ativar Repositórios</a></li>
-    </ul>
-    <hr>
     <h1 id="historia">Pacman um pouco de sua história</h1>
 
     <p>Pacman é o gerenciador de pacotes do Arch, ele foi criado do zero e é utilizado até hoje para Instalar, Remover ou Atualzar pacotes no Arch e derivados, uma curiosidade é que seu nome não vem do famoso jogo de fliperama onde controlamos um circulo amarelo que devora fantasmas, mas sim de seu propósito, ou seja pacman nesse caso é uma sigla para <strong>Pac</strong>kage <strong>Man</strong>ager.</p>
@@ -65,8 +95,12 @@
     <h1 id="ativar">Ativar repositórios extras</h1>
 
     <p>Em alguns casos podemos ativar repositórios extras, o que nos disponibiliza novos pacotes, para fazermos isto devemos editar o arquivo /etc/pacman.conf, e descomentar o repositório que desejamos, por exemplo para abilitar o repositório multilib, devemos desmarcar as linhas [multilib] e include que fica logo abaixo, depois devemos atualizar a lista com o comando: <code>pacman -Sy</code>, após isto podemos instalar a steam através do pacman.</p>
-    <hr>
-    <a href="mirrorlist.html" target="_self" rel="prev" title="Mirrorlist">Página Anterior</a>
-    <a href="instalacao.html" target="_self" rel="next" title="Instalação">Próxima Página</a>
+
+    <a style="float:left" href="mirrorlist.html" rel="prev">
+      <button class="button_ant" style="vertical-align:middle"><span>Anterior</span></button>
+    </a>
+    <a style="float:right" href="instalacao.html" rel="next">
+      <button class="button_prox" style="vertical-align:middle"><span>Próximo</span></button>
+    </a>
   </body>
 </html>

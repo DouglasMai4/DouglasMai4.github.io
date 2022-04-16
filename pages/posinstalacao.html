@@ -2,28 +2,58 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pós Instalação</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../style.css" />
   </head>
   <body>
     <ul class="nav">
-      <li class="navli"><a href="../index.html">Home</a></li>
-      <li class="navli"><a href="download.html" target="_self" rel="next">Download</a></li>
-      <li class="navli"><a href="mirrorlist.html" target="_self">Mirrorlist</a></li>
-      <li class="navli"><a href="pacman.html" target="_self">Pacman</a></li>
-      <li class="navli"><a href="instalacao.html" target="_self">Instalação</a></li>
-      <li class="navli"><a class="active" href="posinstalacao.html" target="_self">Pós Instalação</a></li>
-      <li class="navli"><a href="interface.html" target="_self">Interface gŕafica</a></li>
-      <li class="navli" style="float:right"><a href="contato.html" target="_self">Contato</a></li>
+      <li class="navli">
+        <a class="nava" href="../index.html">Home</a>
+      </li>
+      <li class="navli">
+        <a class="nava" href="download.html">Download</a>
+      </li>
+      <li class="navli">
+        <a class="nava" href="mirrorlist.html">Mirrorlist</a>
+      </li>
+      <li class="dropdown">
+        <a class="dropbtn" href="pacman.html">Pacman</a>
+        <div class="dropdown-content">
+          <a class="navad" href="pacman.html#historia">História</a>
+          <a class="navad" href="pacman.html#utilizar">Como Utilizar</a>
+          <a class="navad" href="pacman.html#ativar">Ativar Repositórios</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a class="dropbtn" href="instalacao.html">Instalação</a>
+        <div class="dropdown-content">
+          <a class="navad" href="instalacao.html#inicial">Configuração Inicial</a>
+          <a class="navad" href="instalacao.html#particao">Configurar Partições</a>
+          <a class="navad" href="instalacao.html#particionar">Particionar</a>
+          <a class="navad" href="instalacao.html#formatar">Formatar e Montar Partições</a>
+          <a class="navad" href="instalacao.html#install">Instalar a Base do Sistema</a>
+          <a class="navad" href="instalacao.html#entrando">Entrando no sistema instalado</a>
+          <a class="navad" href="instalacao.html#grub">Instalando Grub</a>
+        </div>
+      </li>
+      <li class="navli">
+        <a class="activenava" href="#">Pós Instalação</a>
+      </li>
+      <li class="dropdown">
+        <a class="dropbtn" href="interface.html">Interfaces Gráficas</a>
+        <div class="dropdown-content">
+          <a class="navad" href="interface.html#gnome">Gnome</a>
+          <a class="navad" href="interface.html#plasma">Plasma</a>
+          <a class="navad" href="interface.html#xfce">Xfce</a>
+        </div>
+      </li>
+      <li class="navli" style="float:right">
+        <a class="nava" href="contato.html">Contato</a>
+      </li>
     </ul>
 
-    <ul>
-      <li><a href="#pos">Pós Instalação</a></li>
-      <li><a href="#wifi">Conectar ao Wifi</a></li>
-      <li><a href="#xorg">Xorg e drivers</a></li>
-    </ul>
-    <hr>
     <h1 id="pos">Pós Instalação</h1>
 
     <h2 id="wifi">Conectar ao Wifi</h2>
@@ -57,16 +87,19 @@
           <td>Drivers de vídeo para processadores AMD</td>
         </tr>
         <tr>
-          <td>virtualbox-guest-utils virtualbox-guest-modules-arch mesa mesa-libgl</td>
+          <td>virtualbox-guest-utils virtualbox-host-modules-arch mesa mesa-libgl</td>
           <td>Drivers de vídeo para máquinas virtuais</td>
         </tr>
       </tbody>
     </table>
 
     <p>Recomendo instalar o pacote haveged para que o sistema inicie mais rápido</p>
-    <hr>
 
-    <a href="instalacao.html" target="_self" rel="prev" title="Instalação">Página Anterior</a>
-    <a href="interface.html" target="_self" rel="next" title="Interface Gráfica">Próxima Página</a>
+    <a style="float:left" href="instalacao.html" rel="prev">
+      <button class="button_ant" style="vertical-align:middle"><span>Anterior</span></button>
+    </a>
+    <a style="float:right" href="interface.html" rel="next">
+      <button class="button_prox" style="vertical-align:middle"><span>Próximo</span></button>
+    </a>
   </body>
 </html>
