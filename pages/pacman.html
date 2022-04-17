@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Este site contem um tutorial para a instalação do Arch Linux">
+    <meta name="keywords" content="Arch, Linux, Instalação, Dicas, Canoinhas, SC, Brasil">
+    <meta name="autor" content="Douglas Maia">
+    <meta name="robots" content="index, follow">
     <title>Pacman</title>
     <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../style.css" />
@@ -96,11 +100,7 @@
 
     <p>Em alguns casos podemos ativar repositórios extras, o que nos disponibiliza novos pacotes, para fazermos isto devemos editar o arquivo /etc/pacman.conf, e descomentar o repositório que desejamos, por exemplo para abilitar o repositório multilib, devemos desmarcar as linhas [multilib] e include que fica logo abaixo, depois devemos atualizar a lista com o comando: <code>pacman -Sy</code>, após isto podemos instalar a steam através do pacman.</p>
 
-    <a style="float:left" href="mirrorlist.html" rel="prev">
-      <button class="button_ant" style="vertical-align:middle"><span>Anterior</span></button>
-    </a>
-    <a style="float:right" href="instalacao.html" rel="next">
-      <button class="button_prox" style="vertical-align:middle"><span>Próximo</span></button>
-    </a>
+    <button onclick="window.location.href='mirrorlist.html'" class="button_ant" style="vertical-align:middle"><span>Anterior</span></button>
+    <button onclick="window.location.href='instalacao.html'" class="button_prox" style="vertical-align:middle"><span>Próximo</span></button>
   </body>
 </html>
