@@ -29,9 +29,9 @@ img{
   width: 600px;
 }
 table, th, td{
-        border: solid 1px #d8dee9;
-        border-collapse: collapse;
-        padding: 10px;
+  border: solid 1px #d8dee9;
+  border-collapse: collapse;
+  padding: 10px;
 }
 th{
   text-align: center;
