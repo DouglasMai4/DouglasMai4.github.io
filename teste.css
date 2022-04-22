@@ -89,7 +89,6 @@ nav ul {
 }
 nav ul li {
   background: #2E3440;
-  display: inline-block;
   float: left;
   margin: 0 5px;
 }
@@ -167,10 +166,12 @@ nav ul ul ul li {
   }
   nav ul li, nav ul ul li {
     display: block;
-    width: 100%;
+    width: 99%;
   }
   nav ul ul {
-    border-top: none;
+    border: 3px solid #d8dee9;
+    border-left: none;
+    border-right: none;
     display: none;
     float: none;
     opacity: 1;
@@ -185,9 +186,13 @@ nav ul ul ul li {
   */
   nav ul ul li {
     border-bottom: 0;
+    background-color: none;
   }
   nav ul ul a {
-    padding-left: 40px;
+    background-color: #3b4252;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
   }
   /*
   nav ul ul ul a {
@@ -201,18 +206,21 @@ nav ul ul ul li {
     font-size: 18px;
     line-height: 70px;
     padding: 0 20px;
+    background-color: #2E3440;
+    text-decoration: none;
   }
   .show:hover {
-    color: cyan;
+    text-decoration: underline;
   }
   .icon {
+    background-color: #2E3440;
     color: #d8dee9;
     cursor: pointer;
     display: block;
     font-size: 25px;
-    line-height: 70px;
+    line-height: 69px;
     position: absolute;
-    right:  40px;
+    right: 40px;
   }
   nav ul li a:hover {
     box-shadow: none;
@@ -220,7 +228,7 @@ nav ul ul ul li {
   .show + a, ul {
     display: none;
   }
-  [btn^=btn]:checked + ul {
+  input[type="checkbox"]:checked + ul {
     display: block;
   }
 }
