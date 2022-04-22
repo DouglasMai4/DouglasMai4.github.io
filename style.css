@@ -6,41 +6,40 @@
   font-family: 'Fira Code';
   src: url('fonts/FiraCode.ttf') format('truetype');
 }
-body{
+* {
   background-color: #3b4252;
   color: #d8dee9;
-
-  font-family: Confortaa, Arial, sans-serif;
+  box-sizing: border-box;
+  font-family: Confortaa;
+  margin: 0;
+  padding: 0;
 }
-mark{
+mark {
   background-color: #4c566a;
   color: #d8dee9;
 }
-h1{
+h1 {
   color: #d8dee9;
 }
-hr{
+hr {
   color: #d8dee9;
 }
-a{
+a {
   color: #d8dee9;
 }
-img{
+img {
   width: 600px;
 }
-table, th, td{
+table, th, td {
   border: solid 1px #d8dee9;
   border-collapse: collapse;
   padding: 10px;
 }
-th{
+th {
   text-align: center;
 }
-td{
+td {
   text-align: center;
-}
-p{
-  max-width: 600px;
 }
 tbody#detaque:hover, tr:hover{
   background-color: #4c566a;
@@ -50,89 +49,194 @@ code{
   color: #d8dee9;
   font-family: Fira Code;
 }
-
-/* Nav Bar */
-.nav {
+nav div, nav ul, nav a, nav li, .fa-circle-chevron-down {
   background-color: #2E3440;
+  border-radius: 10px;
+}
+body {
+  background-color: #3b4252;
+  padding: 20px;
+}
+p {
+  padding: 5px;
+}
+
+nav {
+  background-color: #2E3440;
+  color: #2E3440;
   border: 1px solid #d8dee9;
   border-radius: 10px;
-  color: #D8DEE9;
-  list-style-type: none;
-  margin: 0;
-  overflow: hidden;
+  margin: 10px;
   padding: 0;
 }
-.dropdown {
-  border-radius: 10px;
+nav:after{
+  clear: both;
+  content: '';
+  display: table;
+}
+nav .Logo {
   color: #d8dee9;
-  display: block;
   float: left;
-  text-align: center;
-  text-decoration: none;
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 70px;
+  padding-left: 60px;
 }
-.navli {
-  float: left;
+nav ul {
+  float: right;
+  list-style: none;
+  margin-right: 40px;
+  position: relative;
 }
-
-.navli .nava, .dropbtn, .activenava {
-  border-radius: 10px;
-  color: #d8dee9;
-  display: block;
-  padding: 14px 16px;
-  text-align: center;
-  text-decoration: none;
-}
-
-.navli .nava:hover, .dropdown:hover .dropbtn {
-  background-color: #434C5E;
-  color: #d8dee9;
-}
-
-.navli, .dropdown {
+nav ul li {
+  background: #2E3440;
   display: inline-block;
+  float: left;
+  margin: 0 5px;
 }
-
-.dropdown-content {
-  background-color: #2E3440;
-  border: 1px solid #d8dee9;
+nav ul li a {
+  color: #d8dee9;
+  font-size: 18px;
+  line-height: 70px;
+  padding: 8px 15px;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: #E5E9F0;
   border-radius: 10px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  display: none;
-  min-width: 160px;
+  box-shadow: 0 0 5px #4C566A,
+              0 0 5px #434C5E;
+}
+nav ul ul li a:hover {
+  box-shadow: none;
+  color: #E5E9F0;
+  text-decoration: underline;
+}
+nav ul ul {
+  border-top: 3px solid #d8dee9;
+  border-bottom: 3px solid #d8dee9;
+  opacity: 0;
   position: absolute;
-  z-index: 1;
+  top: 90px;
+  transition: top .3s;
+  visibility: hidden;
 }
-
-.dropdown-content .navad {
-  color: #d8dee9;
-  display: block;
-  padding: 12px 16px;
-  text-align: left;
-  text-decoration: none;
+/*
+nav ul ul ul {
+  border-top: none;
 }
-
-.dropdown-content .navad:hover {
-	background-color: #434C5E;
-  border-radius: 10px;
-  color: #d8dee9;
+*/
+nav ul li:hover > ul {
+  opacity: 1;
+  top: 70px;
+  visibility: visible;
 }
-
-.dropdown:hover .dropdown-content {
-  display: block;
+nav ul ul li {
+  border-bottom: 1px solid #d8dee9;
+  display: list-item;
+  float: none;
+  margin: 0;
+  position: relative;
+  width: 150px;
 }
-.activenava {
+nav ul ul li a {
+  line-height: 50px;
+  font-size: 15px;
+}
+/*
+nav ul ul ul li {
+  position: relative;
+  top: -70px;
+  left: 150px;
+}
+*/
+.fa-plus {
+  font-size: 15px;
+  margin-left: 40px;
+}
+.show, .icon, input {
+  display: none;
+}
+@media all and (max-width: 968px) {
+  nav ul {
+    float: left;
+    margin-right: 0;
+  }
+  nav .Logo {
+    padding-left: 30px;
+    width: 100%;
+  }
+  nav ul li, nav ul ul li {
+    display: block;
+    width: 100%;
+  }
+  nav ul ul {
+    border-top: none;
+    display: none;
+    float: none;
+    opacity: 1;
+    position: static;
+    top: 70px;
+    visibility: visible;
+  }
+  /*
+  nav ul ul ul {
+    position: static;
+  }
+  */
+  nav ul ul li {
+    border-bottom: 0;
+  }
+  nav ul ul a {
+    padding-left: 40px;
+  }
+  /*
+  nav ul ul ul a {
+    padding-left: 80px;
+  }
+  */
+  .show {
+    color: #d8dee9;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    line-height: 70px;
+    padding: 0 20px;
+  }
+  .show:hover {
+    color: cyan;
+  }
+  .icon {
+    color: #d8dee9;
+    cursor: pointer;
+    display: block;
+    font-size: 25px;
+    line-height: 70px;
+    position: absolute;
+    right:  40px;
+  }
+  nav ul li a:hover {
+    box-shadow: none;
+  }
+  .show + a, ul {
+    display: none;
+  }
+  [btn^=btn]:checked + ul {
+    display: block;
+  }
+}
+.active {
   background-color: #d8dee9;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #4C566A,
+              0 0 5px #434C5E;
   color: #2E3440;
 }
-.dropbtna {
-  background-color: #d8dee9;
-  border-radius: 10px;
-  color: #2E3440;
-  display: block;
-  padding: 14px 16px;
-  text-align: center;
-  text-decoration: none;
+.active:hover {
+  background-color: #2E3440;
+  color: #d8dee9;
 }
+
 
 /* Botão Próximo */
 .button_prox {
@@ -151,6 +255,7 @@ code{
 }
 
 .button_prox span {
+  background-color: #2E3440;
   cursor: pointer;
   display: inline-block;
   position: relative;
@@ -167,7 +272,7 @@ code{
 }
 
 .button_prox:hover span {
-  padding-right: 25px;
+  padding-right: 20px;
 }
 
 .button_prox:hover span:after {
@@ -192,6 +297,7 @@ code{
 }
 
 .button_ant span {
+  background-color: #2E3440;
   cursor: pointer;
   display: inline-block;
   position: relative;
@@ -208,7 +314,7 @@ code{
 }
 
 .button_ant:hover span {
-  padding-left: 25px;
+  padding-left: 20px;
 }
 
 .button_ant:hover span:after {
@@ -234,9 +340,13 @@ header {
   margin-left: auto;
   margin-right: auto;
 }
+header img {
+  background-color: #2E3440;
+}
 
 footer > ul {
   padding: 0;
+  background-color: #2E3440;
 }
 
 footer {
@@ -246,9 +356,10 @@ footer {
   text-align: center;
   font-family: Confortaa;
   font-size: 25px;
-  width: 25%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
+  bottom: 20px;
 }
 
 footer ul li {
@@ -256,5 +367,12 @@ footer ul li {
   margin-left: 10px;
   position: relative;
 }
-
-/* Bootstrap */
+footer a, footer li, footer img {
+  background-color: #2E3440;
+}
+footer ul {
+  border-radius: 10px;
+}
+footer img {
+  padding-top: 5px;
+}

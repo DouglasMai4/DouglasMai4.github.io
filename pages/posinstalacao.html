@@ -10,55 +10,57 @@
     <title>Pós Instalação</title>
     <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../style.css" />
+    <script src="https://kit.fontawesome.com/d6e6e589ec.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header><img style="width: 25px;" src="../img/logo.png" alt="Logo do Arch Linux com o tema de cores Nord"> DArch</header>
     <br>
     <nav>
-      <ul class="nav">
-        <li class="navli">
-          <a class="nava" href="../index.html">Home</a>
+      <div class="Logo"><i class="fa-solid fa-circle-chevron-down"></i>DArch</div>
+      <label for="btn" class="icon">
+        <span class="fa fa-bars"></span>
+      </label>
+      <input type="checkbox" id="btn">
+      <ul>
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="mirrorlist.html">Mirrorlist</a></li>
+        <li>
+          <label for="btn-2" class="show">Pacman +</label>
+          <a href="pacman.html">Pacman</a>
+          <input type="checkbox" id="btn-2">
+          <ul>
+            <li><a href="pacman.html">Início</a></li>
+            <li><a href="pacman.html#utilizar">Como Utilizar</a></li>
+            <li><a href="pacman.html#ativar">Repositórios</a></li>
+          </ul>
         </li>
-        <li class="navli">
-          <a class="nava" href="download.html">Download</a>
+        <li>
+          <label for="btn-3" class="show">Instalação +</label>
+          <a href="instalacao.html">Instalação</a>
+          <input type="checkbox" id="btn-3">
+          <ul>
+            <li><a href="instalacao.html">Início</a></li>
+            <li><a href="instalacao.html#particao">Partições</a></li>
+            <li><a href="instalacao.html#particionar">Particionar</a></li>
+            <li><a href="instalacao.html#formatar">Formatar</a></li>
+            <li><a href="instalacao.html#install">Instalar Base</a></li>
+            <li><a href="instalacao.html#entrando">Entrando SO</a></li>
+            <li><a href="instalacao.html#grub">Instalar GRUB</a></li>
+          </ul>
         </li>
-        <li class="navli">
-          <a class="nava" href="mirrorlist.html">Mirrorlist</a>
+        <li><a class="active" href="posinstalacao.html">Pós Instalação</a></li>
+        <li>
+          <label for="btn-4" class="show">Interfaces Gráficas +</label>
+          <a href="interface.html">Interfaces Gráficas</a>
+          <input type="checkbox" id="btn-4">
+          <ul>
+            <li><a href="interface.html">Gnome</a></li>
+            <li><a href="interface.html#plasma">Plasma</a></li>
+            <li><a href="interface.html#xfce">XFCE</a></li>
+          </ul>
         </li>
-        <li class="dropdown">
-          <a class="dropbtn" href="pacman.html">Pacman</a>
-          <div class="dropdown-content">
-            <a class="navad" href="pacman.html#historia">História</a>
-            <a class="navad" href="pacman.html#utilizar">Como Utilizar</a>
-            <a class="navad" href="pacman.html#ativar">Ativar Repositórios</a>
-          </div>
-        </li>
-        <li class="dropdown">
-          <a class="dropbtn" href="instalacao.html">Instalação</a>
-          <div class="dropdown-content">
-            <a class="navad" href="instalacao.html#inicial">Configuração Inicial</a>
-            <a class="navad" href="instalacao.html#particao">Configurar Partições</a>
-            <a class="navad" href="instalacao.html#particionar">Particionar</a>
-            <a class="navad" href="instalacao.html#formatar">Formatar e Montar Partições</a>
-            <a class="navad" href="instalacao.html#install">Instalar a Base do Sistema</a>
-            <a class="navad" href="instalacao.html#entrando">Entrando no sistema instalado</a>
-            <a class="navad" href="instalacao.html#grub">Instalando Grub</a>
-          </div>
-        </li>
-        <li class="navli">
-          <a class="activenava" href="#">Pós Instalação</a>
-        </li>
-        <li class="dropdown">
-          <a class="dropbtn" href="interface.html">Interfaces Gráficas</a>
-          <div class="dropdown-content">
-            <a class="navad" href="interface.html#gnome">Gnome</a>
-            <a class="navad" href="interface.html#plasma">Plasma</a>
-            <a class="navad" href="interface.html#xfce">Xfce</a>
-          </div>
-        </li>
-        <li class="navli" style="float:right">
-          <a class="nava" href="contato.html">Contato</a>
-        </li>
+        <li><a href="contato.html">Contato</a></li>
       </ul>
     </nav>
 
@@ -109,7 +111,7 @@
         <button onclick="window.location.href='instalacao.html'" class="button_ant" style="vertical-align:middle"><span>Anterior</span></button>
         <button onclick="window.location.href='interface.html'" class="button_prox" style="vertical-align:middle"><span>Próximo</span></button>
     </main>
-
+    <br>
     <footer>
       <ul class="footer_links" style="list-style-type: none;">
         <li>

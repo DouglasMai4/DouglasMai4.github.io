@@ -1,16 +1,68 @@
+@font-face {
+  font-family: 'Confortaa';
+  src: url('fonts/Comfortaa.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Fira Code';
+  src: url('fonts/FiraCode.ttf') format('truetype');
+}
 * {
+  background-color: #3b4252;
+  color: #d8dee9;
   box-sizing: border-box;
-  font-family: Arial;
+  font-family: Confortaa;
   margin: 0;
   padding: 0;
 }
-
+mark {
+  background-color: #4c566a;
+  color: #d8dee9;
+}
+h1 {
+  color: #d8dee9;
+}
+hr {
+  color: #d8dee9;
+}
+a {
+  color: #d8dee9;
+}
+img {
+  width: 600px;
+}
+table, th, td {
+  border: solid 1px #d8dee9;
+  border-collapse: collapse;
+  padding: 10px;
+}
+th {
+  text-align: center;
+}
+td {
+  text-align: center;
+}
+tbody#detaque:hover, tr:hover{
+  background-color: #4c566a;
+}
+code{
+  background-color: #4c566a;
+  color: #d8dee9;
+  font-family: Fira Code;
+}
+nav div, nav ul, nav a, nav li, .fa-circle-chevron-down {
+  background-color: #2E3440;
+  border-radius: 10px;
+}
 body {
-  background: #f2f2f2;
+  background-color: #3b4252;
+}
+p {
+  padding: 20px;
 }
 
 nav {
-  background: #2E3440;
+  background-color: #2E3440;
+  color: #2E3440;
   border: 1px solid #d8dee9;
   border-radius: 10px;
   margin: 10px;
@@ -60,7 +112,8 @@ nav ul ul li a:hover {
   text-decoration: underline;
 }
 nav ul ul {
-  border-top: 3px solid #4C566A;
+  border-top: 3px solid #d8dee9;
+  border-bottom: 3px solid #d8dee9;
   opacity: 0;
   position: absolute;
   top: 90px;
@@ -78,7 +131,7 @@ nav ul li:hover > ul {
   visibility: visible;
 }
 nav ul ul li {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid #d8dee9;
   display: list-item;
   float: none;
   margin: 0;
@@ -87,6 +140,7 @@ nav ul ul li {
 }
 nav ul ul li a {
   line-height: 50px;
+  font-size: 15px;
 }
 /*
 nav ul ul ul li {
