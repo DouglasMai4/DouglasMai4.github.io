@@ -12,58 +12,80 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <ul class="nav">
-      <li class="navli">
-        <a class="activenava" href="#">Home</a>
-      </li>
-      <li class="navli">
-        <a class="nava" href="pages/download.html">Download</a>
-      </li>
-      <li class="navli">
-        <a class="nava" href="pages/mirrorlist.html">Mirrorlist</a>
-      </li>
-      <li class="dropdown">
-        <a class="dropbtn" href="pages/pacman.html">Pacman</a>
-        <div class="dropdown-content">
-          <a class="navad" href="pages/pacman.html#historia">História</a>
-          <a class="navad" href="pages/pacman.html#utilizar">Como Utilizar</a>
-          <a class="navad" href="pages/pacman.html#ativar">Ativar Repositórios</a>
-        </div>
-      </li>
-      <li class="dropdown">
-        <a class="dropbtn" href="pages/instalacao.html">Instalação</a>
-        <div class="dropdown-content">
-          <a class="navad" href="pages/instalacao.html#inicial">Configuração Inicial</a>
-          <a class="navad" href="pages/instalacao.html#particao">Configurar Partições</a>
-          <a class="navad" href="pages/instalacao.html#particionar">Particionar</a>
-          <a class="navad" href="pages/instalacao.html#formatar">Formatar e Montar Partições</a>
-          <a class="navad" href="pages/instalacao.html#install">Instalar a Base do Sistema</a>
-          <a class="navad" href="pages/instalacao.html#entrando">Entrando no sistema instalado</a>
-          <a class="navad" href="pages/instalacao.html#grub">Instalando Grub</a>
-        </div>
-      </li>
-      <li class="navli">
-        <a class="nava" href="pages/posinstalacao.html">Pós Instalação</a>
-      </li>
-      <li class="dropdown">
-        <a class="dropbtn" href="pages/interface.html">Interfaces Gráficas</a>
-        <div class="dropdown-content">
-          <a class="navad" href="pages/interface.html#gnome">Gnome</a>
-          <a class="navad" href="pages/interface.html#plasma">Plasma</a>
-          <a class="navad" href="pages/interface.html#xfce">Xfce</a>
-        </div>
-      </li>
-      <li class="navli" style="float:right">
-        <a class="nava" href="pages/contato.html">Contato</a>
-      </li>
-    </ul>
+    <header><img style="width: 25px;" src="img/logo.png" alt="Logo do Arch Linux com o tema de cores Nord"> DArch</header>
+    <br>
+    <nav>
+      <ul class="nav">
+        <li class="navli">
+          <a class="activenava" href="#">Home</a>
+        </li>
+        <li class="navli">
+          <a class="nava" href="pages/download.html">Download</a>
+        </li>
+        <li class="navli">
+          <a class="nava" href="pages/mirrorlist.html">Mirrorlist</a>
+        </li>
+        <li class="dropdown">
+          <a class="dropbtn" href="pages/pacman.html">Pacman</a>
+          <div class="dropdown-content">
+            <a class="navad" href="pages/pacman.html#historia">História</a>
+            <a class="navad" href="pages/pacman.html#utilizar">Como Utilizar</a>
+            <a class="navad" href="pages/pacman.html#ativar">Ativar Repositórios</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a class="dropbtn" href="pages/instalacao.html">Instalação</a>
+          <div class="dropdown-content">
+            <a class="navad" href="pages/instalacao.html#inicial">Configuração Inicial</a>
+            <a class="navad" href="pages/instalacao.html#particao">Configurar Partições</a>
+            <a class="navad" href="pages/instalacao.html#particionar">Particionar</a>
+            <a class="navad" href="pages/instalacao.html#formatar">Formatar e Montar Partições</a>
+            <a class="navad" href="pages/instalacao.html#install">Instalar a Base do Sistema</a>
+            <a class="navad" href="pages/instalacao.html#entrando">Entrando no sistema instalado</a>
+            <a class="navad" href="pages/instalacao.html#grub">Instalando Grub</a>
+          </div>
+        </li>
+        <li class="navli">
+          <a class="nava" href="pages/posinstalacao.html">Pós Instalação</a>
+        </li>
+        <li class="dropdown">
+          <a class="dropbtn" href="pages/interface.html">Interfaces Gráficas</a>
+          <div class="dropdown-content">
+            <a class="navad" href="pages/interface.html#gnome">Gnome</a>
+            <a class="navad" href="pages/interface.html#plasma">Plasma</a>
+            <a class="navad" href="pages/interface.html#xfce">Xfce</a>
+          </div>
+        </li>
+        <li class="navli" style="float:right">
+          <a class="nava" href="pages/contato.html">Contato</a>
+        </li>
+      </ul>
+    </nav>
 
-    <h1>A origem do Arch Linux</h1>
+    <main>
+      <h1>A origem do Arch Linux</h1>
 
-    <p>Foi desenvolvido originalmente pelo Canadense Judd Vinet, seu código sempre foi focado no minimalisno e simplicidade, esperando que o usuário seja quem vai trazer a coesão esperada para o sistema, ele utiliza do modelo <a href="https://diolinux.com.br/editorial/diferencas-lts-vs-rolling-release.html" target="_blank" rel="nofollow">Rolling Release</a> de lançamento, isso quer dizer que não existe "Versões" do Arch como temos em outras distribuições, a ideia é que o usuário instale uma vez e vá atualizando o sistema constantemente.</p>
+      <p>Foi desenvolvido originalmente pelo Canadense Judd Vinet, seu código sempre foi focado no minimalisno e simplicidade, esperando que o usuário seja quem vai trazer a coesão esperada para o sistema, ele utiliza do modelo <a href="https://diolinux.com.br/editorial/diferencas-lts-vs-rolling-release.html" target="_blank" rel="nofollow">Rolling Release</a> de lançamento, isso quer dizer que não existe "Versões" do Arch como temos em outras distribuições, a ideia é que o usuário instale uma vez e vá atualizando o sistema constantemente.</p>
 
-    <p>Fonte: <a href="https://diolinux.com.br/sistemas-operacionais/arch-linux/video-conta-como-o-arch-linux-foi-criado.html#:~:text=O%20Arch%20Linux%20foi%20desenvolvido,mesmo%20espera%20para%20o%20sistema." target="_blank" rel="nofollow">Diolinux</a></p>
+      <p>Fonte: <a href="https://diolinux.com.br/sistemas-operacionais/arch-linux/video-conta-como-o-arch-linux-foi-criado.html#:~:text=O%20Arch%20Linux%20foi%20desenvolvido,mesmo%20espera%20para%20o%20sistema." target="_blank" rel="nofollow">Diolinux</a></p>
 
-    <button onclick="window.location.href='pages/download.html'" class="button_prox" style="vertical-align:middle"><span>Próximo</span></button>
+      <button onclick="window.location.href='pages/download.html'" class="button_prox" style="vertical-align:middle"><span>Próximo</span></button>
+    </main>
+
+    <footer>
+      <ul style="list-style-type: none;">
+        <li>
+          <a href="https://github.com/douglasmai4" target="_blank"><img style="width: 50px;" src="img/github.png" alt="Logomarca do GitHub"></a>
+        </li>
+        <li>
+          <a href="https://t.me/Douglas_Maia" target="_blank"><img style="width: 50px;" src="img/telegram.png" alt="Logomarca do Telegram"></a>
+        </li>
+        <li>
+          <a href="mailto:douglasmai4@protonmail.com" target="_blank"><img style="width: 50px;" src="img/email.png" alt="Icone de E-mail"></a>
+        </li>
+        <li><a href="https://www.instagram.com/invites/contact/?i=10opocaxzkeqw&utm_content=4840o3c" target="_blank"><img style="width: 50px;" src="img/instagram.png" alt="Logomarca do Instagram"></a></li>
+      </ul>
+    </footer>
+    <a href="teste.html">Teste</a>
   </body>
 </html>

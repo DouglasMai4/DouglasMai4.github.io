@@ -12,69 +12,90 @@
     <link rel="stylesheet" type="text/css" href="../style.css" />
   </head>
   <body>
-    <ul class="nav">
-      <li class="navli">
-        <a class="nava" href="../index.html">Home</a>
-      </li>
-      <li class="navli">
-        <a class="nava" href="download.html">Download</a>
-      </li>
-      <li class="navli">
-        <a class="activenava" href="mirrorlist.html">Mirrorlist</a>
-      </li>
-      <li class="dropdown">
-        <a class="dropbtn" href="pacman.html">Pacman</a>
-        <div class="dropdown-content">
-          <a class="navad" href="pacman.html#historia">História</a>
-          <a class="navad" href="pacman.html#utilizar">Como Utilizar</a>
-          <a class="navad" href="pacman.html#ativar">Ativar Repositórios</a>
-        </div>
-      </li>
-      <li class="dropdown">
-        <a class="dropbtn" href="instalacao.html">Instalação</a>
-        <div class="dropdown-content">
-          <a class="navad" href="instalacao.html#inicial">Configuração Inicial</a>
-          <a class="navad" href="instalacao.html#particao">Configurar Partições</a>
-          <a class="navad" href="instalacao.html#particionar">Particionar</a>
-          <a class="navad" href="instalacao.html#formatar">Formatar e Montar Partições</a>
-          <a class="navad" href="instalacao.html#install">Instalar a Base do Sistema</a>
-          <a class="navad" href="instalacao.html#entrando">Entrando no sistema instalado</a>
-          <a class="navad" href="instalacao.html#grub">Instalando Grub</a>
-        </div>
-      </li>
-      <li class="navli">
-        <a class="nava" href="posinstalacao.html">Pós Instalação</a>
-      </li>
-      <li class="dropdown">
-        <a class="dropbtn" href="interface.html">Interfaces Gráficas</a>
-        <div class="dropdown-content">
-          <a class="navad" href="interface.html#gnome">Gnome</a>
-          <a class="navad" href="interface.html#plasma">Plasma</a>
-          <a class="navad" href="interface.html#xfce">Xfce</a>
-        </div>
-      </li>
-      <li class="navli" style="float:right">
-        <a class="nava" href="contato.html">Contato</a>
-      </li>
-    </ul>
+    <header><img style="width: 25px;" src="../img/logo.png" alt="Logo do Arch Linux com o tema de cores Nord"> DArch</header>
+    <br>
+    <nav>
+      <ul class="nav">
+        <li class="navli">
+          <a class="nava" href="../index.html">Home</a>
+        </li>
+        <li class="navli">
+          <a class="nava" href="download.html">Download</a>
+        </li>
+        <li class="navli">
+          <a class="activenava" href="mirrorlist.html">Mirrorlist</a>
+        </li>
+        <li class="dropdown">
+          <a class="dropbtn" href="pacman.html">Pacman</a>
+          <div class="dropdown-content">
+            <a class="navad" href="pacman.html#historia">História</a>
+            <a class="navad" href="pacman.html#utilizar">Como Utilizar</a>
+            <a class="navad" href="pacman.html#ativar">Ativar Repositórios</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a class="dropbtn" href="instalacao.html">Instalação</a>
+          <div class="dropdown-content">
+            <a class="navad" href="instalacao.html#inicial">Configuração Inicial</a>
+            <a class="navad" href="instalacao.html#particao">Configurar Partições</a>
+            <a class="navad" href="instalacao.html#particionar">Particionar</a>
+            <a class="navad" href="instalacao.html#formatar">Formatar e Montar Partições</a>
+            <a class="navad" href="instalacao.html#install">Instalar a Base do Sistema</a>
+            <a class="navad" href="instalacao.html#entrando">Entrando no sistema instalado</a>
+            <a class="navad" href="instalacao.html#grub">Instalando Grub</a>
+          </div>
+        </li>
+        <li class="navli">
+          <a class="nava" href="posinstalacao.html">Pós Instalação</a>
+        </li>
+        <li class="dropdown">
+          <a class="dropbtn" href="interface.html">Interfaces Gráficas</a>
+          <div class="dropdown-content">
+            <a class="navad" href="interface.html#gnome">Gnome</a>
+            <a class="navad" href="interface.html#plasma">Plasma</a>
+            <a class="navad" href="interface.html#xfce">Xfce</a>
+          </div>
+        </li>
+        <li class="navli" style="float:right">
+          <a class="nava" href="contato.html">Contato</a>
+        </li>
+      </ul>
+    </nav>
 
-    <h1>Mirrorlist</h1>
+    <main>
+      <h1>Mirrorlist</h1>
 
-    <p>Mirrorlist é onde fica a localização dos servidores de onde serão baixados os pacotes instalados pelo <a href="../pages/pacman.html">pacman</a> podemos alteralo de forma bem simples, executando o comando como root: <code>nano /etc/pacman.d/mirrorlist</code> (OBS: aqui irei utilizar o nano mas pode utilizar o editor que preferir), já iremos poder ver os servidores dos pacotes, para atualizar está lista podemos utilizar uma ferramenta do próprio site do Arch chamada <a href="https://archlinux.org/mirrorlist/" target="_blank" rel="nofollow">Pacman Mirrorlist Generator</a>.</p>
+      <p>Mirrorlist é onde fica a localização dos servidores de onde serão baixados os pacotes instalados pelo <a href="../pages/pacman.html">pacman</a> podemos alteralo de forma bem simples, executando o comando como root: <code>nano /etc/pacman.d/mirrorlist</code> (OBS: aqui irei utilizar o nano mas pode utilizar o editor que preferir), já iremos poder ver os servidores dos pacotes, para atualizar está lista podemos utilizar uma ferramenta do próprio site do Arch chamada <a href="https://archlinux.org/mirrorlist/" target="_blank" rel="nofollow">Pacman Mirrorlist Generator</a>.</p>
 
-    <img src="../img/mirrorlist.png" alt="Página simples com uma lista de países para selecionar de onde será gerada a lista de servidores para o pacman, abaixo da lista temos duas opições de protocolos para serem utilizados HTTP e HTTPS, abaixo detas opições temos também a opição para escolher qual a versão do IP desejamos utilizar, IPv4 ou/e IPv6, mais abaixo temos a opição de utilizar o mirror estatus, e o botão para nos levar à lista gerada." title="Pacman Mirrorlist Generator">
+      <img src="../img/mirrorlist.png" alt="Página simples com uma lista de países para selecionar de onde será gerada a lista de servidores para o pacman, abaixo da lista temos duas opições de protocolos para serem utilizados HTTP e HTTPS, abaixo detas opições temos também a opição para escolher qual a versão do IP desejamos utilizar, IPv4 ou/e IPv6, mais abaixo temos a opição de utilizar o mirror estatus, e o botão para nos levar à lista gerada." title="Pacman Mirrorlist Generator">
 
-    <p>Recomendo marcar a opição de utilizar mirrorlist status para que você tenhas certeza de que os links estejam funcioando</p>
-    <p>Após clicar em gerar lista você terá uma tela semelhante a está:</p>
+      <p>Recomendo marcar a opição de utilizar mirrorlist status para que você tenhas certeza de que os links estejam funcioando</p>
+      <p>Após clicar em gerar lista você terá uma tela semelhante a está:</p>
 
-    <img src="../img/mirror.png" alt="Resultado gerado, uma lista com links e comentário informando que são do Brasil" title="Mirrorlist">
+      <img src="../img/mirror.png" alt="Resultado gerado, uma lista com links e comentário informando que são do Brasil" title="Mirrorlist">
 
-    <p>Agora é somente copiar todas as linha e copialas para o arquivo /etc/pacman.d/mirrorlist, caso esteja na instalação do Arch e não possua interface gráfica você pode usar o lynx.</p>
-    <p>Para isso execute o comando: <code>lynx https://archlinux.org/mirrorlist</code> e selecione as opições como faria em qualquer navegador, após ter gerado a mirrolist, precione P no teclado, selecione a opição para salvar local, e mude o nome para um nome fácil para você lembrar depois, agora execute o seguinte comando como root: <code>cat NOME_DO_ARQUIVO > /etc/pacman.d/mirrolist</code>, <mark>não se esqueça de descomentar todos os servidores para que tudo funcione normalmente.</mark></p>
+      <p>Agora é somente copiar todas as linha e copialas para o arquivo /etc/pacman.d/mirrorlist, caso esteja na instalação do Arch e não possua interface gráfica você pode usar o lynx.</p>
+      <p>Para isso execute o comando: <code>lynx https://archlinux.org/mirrorlist</code> e selecione as opições como faria em qualquer navegador, após ter gerado a mirrolist, precione P no teclado, selecione a opição para salvar local, e mude o nome para um nome fácil para você lembrar depois, agora execute o seguinte comando como root: <code>cat NOME_DO_ARQUIVO > /etc/pacman.d/mirrolist</code>, <mark>não se esqueça de descomentar todos os servidores para que tudo funcione normalmente.</mark></p>
 
-    <p>Após ter modificado o arquivo MIRRORLIST, precisamos atualizar a lista de pacotes do Arch executando o seguinte comando como root: <code>pacman -Sy</code>, se você fez corretamente tudo deve estar funcionando.</p>
+      <p>Após ter modificado o arquivo MIRRORLIST, precisamos atualizar a lista de pacotes do Arch executando o seguinte comando como root: <code>pacman -Sy</code>, se você fez corretamente tudo deve estar funcionando.</p>
 
-    <button onclick="window.location.href='download.html'" class="button_ant" style="vertical-align:middle"><span>Anterior</span></button>
-    <button onclick="window.location.href='pacman.html'" class="button_prox" style="vertical-align:middle"><span>Próximo</span></button>
+      <button onclick="window.location.href='download.html'" class="button_ant" style="vertical-align:middle"><span>Anterior</span></button>
+      <button onclick="window.location.href='pacman.html'" class="button_prox" style="vertical-align:middle"><span>Próximo</span></button>
+    </main>
+
+    <footer>
+      <ul class="footer_links" style="list-style-type: none;">
+        <li>
+          <a href="https://github.com/douglasmai4" target="_blank"><img style="width: 50px;" src="../img/github.png" alt="Logomarca do GitHub"></a>
+        </li>
+        <li>
+          <a href="https://t.me/Douglas_Maia" target="_blank"><img style="width: 50px;" src="../img/telegram.png" alt="Logomarca do Telegram"></a>
+        </li>
+        <li>
+          <a href="mailto:douglasmai4@protonmail.com" target="_blank"><img style="width: 50px;" src="../img/email.png" alt="Icone de E-mail"></a>
+        </li>
+        <li><a href="https://www.instagram.com/invites/contact/?i=10opocaxzkeqw&utm_content=4840o3c" target="_blank"><img style="width: 50px;" src="../img/instagram.png" alt="Logomarca do Instagram"></a></li>
+      </ul>
+    </footer>
   </body>
 </html>

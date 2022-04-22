@@ -12,95 +12,116 @@
     <link rel="stylesheet" type="text/css" href="../style.css" />
   </head>
   <body>
-    <ul class="nav">
-      <li class="navli">
-        <a class="nava" href="../index.html">Home</a>
-      </li>
-      <li class="navli">
-        <a class="nava" href="download.html">Download</a>
-      </li>
-      <li class="navli">
-        <a class="nava" href="mirrorlist.html">Mirrorlist</a>
-      </li>
-      <li class="dropdown">
-        <a class="dropbtna" href="#">Pacman</a>
-        <div class="dropdown-content">
-          <a class="navad" href="pacman.html#historia">História</a>
-          <a class="navad" href="pacman.html#utilizar">Como Utilizar</a>
-          <a class="navad" href="pacman.html#ativar">Ativar Repositórios</a>
-        </div>
-      </li>
-      <li class="dropdown">
-        <a class="dropbtn" href="instalacao.html">Instalação</a>
-        <div class="dropdown-content">
-          <a class="navad" href="instalacao.html#inicial">Configuração Inicial</a>
-          <a class="navad" href="instalacao.html#particao">Configurar Partições</a>
-          <a class="navad" href="instalacao.html#particionar">Particionar</a>
-          <a class="navad" href="instalacao.html#formatar">Formatar e Montar Partições</a>
-          <a class="navad" href="instalacao.html#install">Instalar a Base do Sistema</a>
-          <a class="navad" href="instalacao.html#entrando">Entrando no sistema instalado</a>
-          <a class="navad" href="instalacao.html#grub">Instalando Grub</a>
-        </div>
-      </li>
-      <li class="navli">
-        <a class="nava" href="posinstalacao.html">Pós Instalação</a>
-      </li>
-      <li class="dropdown">
-        <a class="dropbtn" href="interface.html">Interfaces Gráficas</a>
-        <div class="dropdown-content">
-          <a class="navad" href="interface.html#gnome">Gnome</a>
-          <a class="navad" href="interface.html#plasma">Plasma</a>
-          <a class="navad" href="interface.html#xfce">Xfce</a>
-        </div>
-      </li>
-      <li class="navli" style="float:right">
-        <a class="nava" href="contato.html">Contato</a>
-      </li>
-    </ul>
+    <header><img style="width: 25px;" src="../img/logo.png" alt="Logo do Arch Linux com o tema de cores Nord"> DArch</header>
+    <br>
+    <nav>
+      <ul class="nav">
+        <li class="navli">
+          <a class="nava" href="../index.html">Home</a>
+        </li>
+        <li class="navli">
+          <a class="nava" href="download.html">Download</a>
+        </li>
+        <li class="navli">
+          <a class="nava" href="mirrorlist.html">Mirrorlist</a>
+        </li>
+        <li class="dropdown">
+          <a class="dropbtna" href="#">Pacman</a>
+          <div class="dropdown-content">
+            <a class="navad" href="pacman.html#historia">História</a>
+            <a class="navad" href="pacman.html#utilizar">Como Utilizar</a>
+            <a class="navad" href="pacman.html#ativar">Ativar Repositórios</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a class="dropbtn" href="instalacao.html">Instalação</a>
+          <div class="dropdown-content">
+            <a class="navad" href="instalacao.html#inicial">Configuração Inicial</a>
+            <a class="navad" href="instalacao.html#particao">Configurar Partições</a>
+            <a class="navad" href="instalacao.html#particionar">Particionar</a>
+            <a class="navad" href="instalacao.html#formatar">Formatar e Montar Partições</a>
+            <a class="navad" href="instalacao.html#install">Instalar a Base do Sistema</a>
+            <a class="navad" href="instalacao.html#entrando">Entrando no sistema instalado</a>
+            <a class="navad" href="instalacao.html#grub">Instalando Grub</a>
+          </div>
+        </li>
+        <li class="navli">
+          <a class="nava" href="posinstalacao.html">Pós Instalação</a>
+        </li>
+        <li class="dropdown">
+          <a class="dropbtn" href="interface.html">Interfaces Gráficas</a>
+          <div class="dropdown-content">
+            <a class="navad" href="interface.html#gnome">Gnome</a>
+            <a class="navad" href="interface.html#plasma">Plasma</a>
+            <a class="navad" href="interface.html#xfce">Xfce</a>
+          </div>
+        </li>
+        <li class="navli" style="float:right">
+          <a class="nava" href="contato.html">Contato</a>
+        </li>
+      </ul>
+    </nav>
 
-    <h1 id="historia">Pacman um pouco de sua história</h1>
+    <main>
+      <h1 id="historia">Pacman um pouco de sua história</h1>
 
-    <p>Pacman é o gerenciador de pacotes do Arch, ele foi criado do zero e é utilizado até hoje para Instalar, Remover ou Atualzar pacotes no Arch e derivados, uma curiosidade é que seu nome não vem do famoso jogo de fliperama onde controlamos um circulo amarelo que devora fantasmas, mas sim de seu propósito, ou seja pacman nesse caso é uma sigla para <strong>Pac</strong>kage <strong>Man</strong>ager.</p>
+      <p>Pacman é o gerenciador de pacotes do Arch, ele foi criado do zero e é utilizado até hoje para Instalar, Remover ou Atualzar pacotes no Arch e derivados, uma curiosidade é que seu nome não vem do famoso jogo de fliperama onde controlamos um circulo amarelo que devora fantasmas, mas sim de seu propósito, ou seja pacman nesse caso é uma sigla para <strong>Pac</strong>kage <strong>Man</strong>ager.</p>
 
-    <hr>
-    <h1 id="utilizar">Como utilizar o pacman ?</h1>
+      <hr>
+      <h1 id="utilizar">Como utilizar o pacman ?</h1>
 
-    <p>A utilização do Pacman é bem simples, simplesmente digitamos: <code>pacman &lt;OPIÇÃO&gt; PACOTE</code></p>
-    <p>Uma pequena tabela com opições para utilizarmos o pacman</p>
-    <table>
-      <thead>
-        <tr>
-          <th>Opição</th>
-          <th>Descrição</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>-S PACOTE</td>
-          <td>Instala um pacote e suas dependências.</td>
-        </tr>
-        <tr>
-          <td>-Sy</td>
-          <td>Atualiza a lista de pacotes.</td>
-        </tr>
-        <tr>
-          <td>-R PACOTE</td>
-          <td>Remove somente o pacote.</td>
-        </tr>
-        <tr>
-          <td>-Rs PACOTE</td>
-          <td>Remove o pacote e as suas dependências não utilizadas.</td>
-        </tr>
-      </tbody>
-    </table>
+      <p>A utilização do Pacman é bem simples, simplesmente digitamos: <code>pacman &lt;OPIÇÃO&gt; PACOTE</code></p>
+      <p>Uma pequena tabela com opições para utilizarmos o pacman</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Opição</th>
+            <th>Descrição</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>-S PACOTE</td>
+            <td>Instala um pacote e suas dependências.</td>
+          </tr>
+          <tr>
+            <td>-Sy</td>
+            <td>Atualiza a lista de pacotes.</td>
+          </tr>
+          <tr>
+            <td>-R PACOTE</td>
+            <td>Remove somente o pacote.</td>
+          </tr>
+          <tr>
+            <td>-Rs PACOTE</td>
+            <td>Remove o pacote e as suas dependências não utilizadas.</td>
+          </tr>
+        </tbody>
+      </table>
 
-    <p>Mais informações sobre o <a href="https://wiki.archlinux.org/title/Pacman_(Portugu%C3%AAs)" target="_blank" rel="nofollow" title="Arch Wiki">Pacman</a></p>
-    <hr>
-    <h1 id="ativar">Ativar repositórios extras</h1>
+      <p>Mais informações sobre o <a href="https://wiki.archlinux.org/title/Pacman_(Portugu%C3%AAs)" target="_blank" rel="nofollow" title="Arch Wiki">Pacman</a></p>
+      <hr>
+      <h1 id="ativar">Ativar repositórios extras</h1>
 
-    <p>Em alguns casos podemos ativar repositórios extras, o que nos disponibiliza novos pacotes, para fazermos isto devemos editar o arquivo /etc/pacman.conf, e descomentar o repositório que desejamos, por exemplo para abilitar o repositório multilib, devemos desmarcar as linhas [multilib] e include que fica logo abaixo, depois devemos atualizar a lista com o comando: <code>pacman -Sy</code>, após isto podemos instalar a steam através do pacman.</p>
+      <p>Em alguns casos podemos ativar repositórios extras, o que nos disponibiliza novos pacotes, para fazermos isto devemos editar o arquivo /etc/pacman.conf, e descomentar o repositório que desejamos, por exemplo para abilitar o repositório multilib, devemos desmarcar as linhas [multilib] e include que fica logo abaixo, depois devemos atualizar a lista com o comando: <code>pacman -Sy</code>, após isto podemos instalar a steam através do pacman.</p>
 
-    <button onclick="window.location.href='mirrorlist.html'" class="button_ant" style="vertical-align:middle"><span>Anterior</span></button>
-    <button onclick="window.location.href='instalacao.html'" class="button_prox" style="vertical-align:middle"><span>Próximo</span></button>
+      <button onclick="window.location.href='mirrorlist.html'" class="button_ant" style="vertical-align:middle"><span>Anterior</span></button>
+      <button onclick="window.location.href='instalacao.html'" class="button_prox" style="vertical-align:middle"><span>Próximo</span></button>
+    </main>
+
+    <footer>
+      <ul class="footer_links" style="list-style-type: none;">
+        <li>
+          <a href="https://github.com/douglasmai4" target="_blank"><img style="width: 50px;" src="../img/github.png" alt="Logomarca do GitHub"></a>
+        </li>
+        <li>
+          <a href="https://t.me/Douglas_Maia" target="_blank"><img style="width: 50px;" src="../img/telegram.png" alt="Logomarca do Telegram"></a>
+        </li>
+        <li>
+          <a href="mailto:douglasmai4@protonmail.com" target="_blank"><img style="width: 50px;" src="../img/email.png" alt="Icone de E-mail"></a>
+        </li>
+        <li><a href="https://www.instagram.com/invites/contact/?i=10opocaxzkeqw&utm_content=4840o3c" target="_blank"><img style="width: 50px;" src="../img/instagram.png" alt="Logomarca do Instagram"></a></li>
+      </ul>
+    </footer>
   </body>
 </html>

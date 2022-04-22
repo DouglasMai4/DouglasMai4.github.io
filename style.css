@@ -221,3 +221,40 @@ code{
   float: left;
   margin: 10px;
 }
+
+header {
+  border-radius: 10px;
+  background-color: #2E3440;
+  border: 1px solid #d8dee9;
+  text-align: center;
+  font-family: Confortaa;
+  font-size: 25px;
+  width: 25%;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer > ul {
+  padding: 0;
+}
+
+footer {
+  border-radius: 10px;
+  background-color: #2E3440;
+  border: 1px solid #d8dee9;
+  text-align: center;
+  font-family: Confortaa;
+  font-size: 25px;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer ul li {
+  display: inline;
+  margin-left: 10px;
+  position: relative;
+}
+
+/* Bootstrap */
