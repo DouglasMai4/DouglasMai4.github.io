@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Este site contem um tutorial para a instalação do Arch Linux">
@@ -8,215 +8,235 @@
     <meta name="autor" content="Douglas Maia">
     <meta name="robots" content="index, follow">
     <title>Instalação</title>
-    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <link rel="shortcut icon" href="../imgs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
     <script src="https://kit.fontawesome.com/d6e6e589ec.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <header><img style="width: 25px;" src="../img/logo.png" alt="Logo do Arch Linux com o tema de cores Nord"> DArch</header>
-    <br>
+</head>
+<body>
+    <header>
+        <a href="#">Instalação Arch Linux</a>
+    </header>
     <nav>
-      <div class="Logo"><i class="fa-solid fa-circle-chevron-down"></i>DArch</div>
-      <label for="btn" class="icon">
-        <span class="fa fa-bars"></span>
-      </label>
-      <input type="checkbox" id="btn">
-      <ul>
-        <li><a href="../index.html">Início</a></li>
-        <li><a href="download.html">Download</a></li>
-        <li><a href="mirrorlist.html">Mirrorlist</a></li>
-        <li>
-          <label for="btn-2" class="show">Pacman +</label>
-          <a href="pacman.html">Pacman</a>
-          <input type="checkbox" id="btn-2">
-          <ul>
-            <li><a href="pacman.html">Início</a></li>
-            <li><a href="pacman.html#utilizar">Como Utilizar</a></li>
-            <li><a href="pacman.html#ativar">Repositórios</a></li>
-          </ul>
-        </li>
-        <li>
-          <label for="btn-3" class="show">Instalação +</label>
-          <a class="active" href="#">Instalação</a>
-          <input type="checkbox" id="btn-3">
-          <ul>
-            <li><a href="instalacao.html">Início</a></li>
-            <li><a href="instalacao.html#particao">Partições</a></li>
-            <li><a href="instalacao.html#particionar">Particionar</a></li>
-            <li><a href="instalacao.html#formatar">Formatar</a></li>
-            <li><a href="instalacao.html#install">Instalar Base</a></li>
-            <li><a href="instalacao.html#entrando">Entrando SO</a></li>
-            <li><a href="instalacao.html#grub">Instalar GRUB</a></li>
-          </ul>
-        </li>
-        <li><a href="posinstalacao.html">Pós Instalação</a></li>
-        <li>
-          <label for="btn-4" class="show">Interfaces Gráficas +</label>
-          <a href="interface.html">Interfaces Gráficas</a>
-          <input type="checkbox" id="btn-4">
-          <ul>
-            <li><a href="interface.html">Gnome</a></li>
-            <li><a href="interface.html#plasma">Plasma</a></li>
-            <li><a href="interface.html#xfce">XFCE</a></li>
-          </ul>
-        </li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
+        <img src="../imgs/logo.png" alt="Logo">
+        <label for="btn" class="icon">
+            <span class="fa fa-bars"></span>
+        </label>
+        <input type="checkbox" id="btn">
+        <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="mirrorlist.html">Mirrorlist</a></li>
+            <li>
+                <label for="btn2" class="show">Pacman <i class="fa-solid fa-circle-plus"></i></label>
+                <a href="pacman.html">Pacman</a>
+                <input type="checkbox" id="btn2">
+                <ul>
+                    <li><a href="pacman.html#utilizar">Como Utilizar</a></li>
+                    <li><a class="last" href="pacman.html#repo">Repositórios</a></li>
+                </ul>
+            </li>
+            <li>
+                <label for="btn3" class="show-active">Instalação <i class="fa-solid fa-circle-plus"></i></label>
+                <a class="active" href="#">Instalação</a>
+                <input type="checkbox" id="btn3">
+                <ul>
+                    <li><a href="instalacao.html#particao">Partições</a></li>
+                    <li><a href="instalacao.html#particionar">Particionar</a></li>
+                    <li><a href="instalacao.html#formatar">Formatar</a></li>
+                    <li><a href="instalacao.html#install">Instalar Base</a></li>
+                    <li><a href="instalacao.html#so">Entrando SO</a></li>
+                    <li><a class="last" href="instalacao.html#grub">Instalar GRUB</a></li>
+                </ul>
+            </li>
+            <li><a href="posinstalacao.html">Pós Instalação</a></li>
+            <li>
+                <label for="btn4" class="show">Interfaces Gráficas <i class="fa-solid fa-circle-plus"></i></label>
+                <a href="interface.html">Interfaces Gráficas</a>
+                <input type="checkbox" id="btn4">
+                <ul>
+                    <li><a href="interface.html#gnome">Gnome</a></li>
+                    <li><a href="interface.html#plasma">Plasma</a></li>
+                    <li><a class="last" href="interface.html#xfce">XFCE</a></li>
+                </ul>
+            </li>
+            <li><a href="sobre.html">Sobre</a></li>
+        </ul>
     </nav>
 
     <main>
-      <h1>Instalação</h1>
-      <h2 id="inicial">Configuração Inicial</h2>
-      <p>Para começarmos devemos mudar o estilo de teclado desta forma: <code>loadkeys br-abnt2</code><br><mark>Troque br-abnt2 para o estilo do seu teclado</mark></p>
+        <h1>Configuração Inicial</h1>
+        <p>Para começarmos devemos mudar o estilo de teclado desta forma:</p>
+        <p><code>loadkeys br-abnt2</code></p>
+        <p><mark>Troque br-abnt2 para o estilo do seu teclado</mark></p>
 
-      <p>Agora vamos nos conectar a internet, alguns tutoriais desatualizados mandam utilizar wifi-menu para se conectar ao WIFI mas o Arch não vem com ele instalado por padrão por isso iremos utilizar o <strong>IWD</strong>.</p>
-      <p>Primeiro vamos entrar no <strong>IWD</strong>: <code>iwctl</code></p>
-      <p>Agora vamos ver a lista de redes disponiveis executando o comando: <code>iwctl <em>wlan0</em> get-networks</code></p>
-      <p>Vamos nos conectar a rede: <code>iwctl <em>wlan0</em> connect NOME_DA_REDE</code> </p>
-      <p>Vamos testar se a conexão está funcionando: <code>ping google.com</code></p>
-      <p><mark>Troque Wlan0 pela sua placa de rede</mark>
-      <br>
-      <mark>Caso esteja conectado via cabo ignore está etapa</mark>
-      </p>
+        <p>Agora vamos nos conectar a internet, alguns tutoriais desatualizados mandam utilizar wifi-menu para se conectar ao WIFI mas o Arch não vem com ele instalado por padrão por isso iremos utilizar o <strong>IWD</strong>.</p>
+        <p>Primeiro vamos entrar no <strong>IWD</strong>:</p>
+        <p><code>iwctl</code></p>
+        <p>Agora vamos ver a lista de redes disponiveis executando o comando:</p>
+        <p><code>iwctl <em>wlan0</em> get-networks</code></p>
+        <p>Vamos nos conectar a rede:</p>
+        <p><code>iwctl <em>wlan0</em> connect NOME_DA_REDE</code></p>
+        <p>Vamos testar se a conexão está funcionando:</p>
+        <p><code>ping google.com</code></p>
+        <p><mark>Troque Wlan0 pela sua placa de rede</mark></p>
+        </p><mark>Caso esteja conectado via cabo ignore está etapa</mark></p>
 
-      <hr>
-      <h2 id="particao">Configurar Partições</h2>
-      <p>Utilize o comando: <code>fdisk -l</code> para listar todos os dispositivos conectados, é importante identificar qual HD/SSD você deseja instalar o Arch, para exemplo vamos dizer que vamos usar o disco <em>/dev/sda</em></p>
+        <hr>
+        <h2 id="particao">Configurar Partições</h2>
+        <p>Utilize o comando:</p>
+        <p><code>fdisk -l</code></p>
+        <p>Para listar todos os dispositivos conectados, é importante identificar qual HD/SSD você deseja instalar o Arch, para exemplo vamos dizer que vamos usar o disco <em>/dev/sda</em></p>
 
-      <mark>O passo a seguir irá formatar o disco então só o fassa caso deseje instalar somente o Arch, sem dual boot.</mark>
-      <p>Agora acesse o seu disco utilizando: <code>fdisk /dev/sda</code></p>
-      <p>agora você pode digitar M para ver as opições disponiveis, neste caso queremos criar uma tabela GPT vazia então vamos digitar g, após isto digitamos W para salvar e sair, <strong>Lembrando que isto irá formatar o seu HD/SSD</strong></p>
+        <p><mark>O passo a seguir irá formatar o disco então só o fassa caso deseje instalar somente o Arch, sem dual boot.</mark></p>
+        <p>Agora acesse o seu disco utilizando:</p>
+        <p><code>fdisk /dev/sda</code></p>
+        <p>Agora você pode digitar M para ver as opições disponiveis, neste caso queremos criar uma tabela GPT vazia então vamos digitar g, após isto digitamos W para salvar e sair, <strong>Lembrando que isto irá formatar o seu HD/SSD</strong></p>
 
-      <h2 id="particionar">Particionar</h2>
+        <hr>
+        <h2 id="particionar">Particionar</h2>
+        <p>Agora vamos particionar o HD/SSD, eu gosto de utilizar o CFDISK mas sinta-se a vontade para utilizar qualquer outro particionador.</p>
+        <p>Utilize o comando para editar as partções no disco:</p>
+        <p><code>cfdisk /dev/sda</code></p>
+        <p>Agora crie as seguintes partições:</p>
+        <dl>
+            <dt>Bios Boot</dt>
+            <dd>Partição de 512MB para boot Legacy.</dd>
 
-      <p>Agora vamos particionar o HD/SSD, eu gosto de utilizar o CFDISK mas sinta-se a vontade para utilizar qualquer outro particionador.</p>
-      <p>Utilize o comando para editar as partções no disco: <code>cfdisk /dev/sda</code></p>
-      <p>Agora crie as seguintes partições:</p>
-      <dl>
-        <dt>Bios Boot</dt>
-        <dd>Partição de 512MB para boot Legacy.</dd>
+            <dt>EFI System</dt>
+            <dd>Partição de 512MB para EFI.</dd>
 
-        <dt>EFI System</dt>
-        <dd>Partição de 512MB para EFI.</dd>
+            <dt>Swap</dt>
+            <dd>Recomendo 2GB para utilizar como swap do sistema (Não obrigatório)</dd>
 
-        <dt>Swap</dt>
-        <dd>Recomendo 2GB para utilizar como swap do sistema (Não obrigatório)</dd>
+            <dt>Linux File System</dt>
+            <dd>Mais de 20GB para o / do sistema</dd>
 
-        <dt>Linux File System</dt>
-        <dd>Mais de 20GB para o / do sistema</dd>
+            <dt>Linux File Sistem</dt>
+            <dd>Quantidade que desejar recomendo mais de 20GB para o /home (Somente criar está partição caso deseje /home separado)</dd>
+        </dl>
 
-        <dt>Linux File Sistem</dt>
-        <dd>Quantidade que desejar recomendo mais de 20GB para o /home (Somente criar está partição caso deseje /home separado)</dd>
-      </dl>
+        <hr>
+        <h2 id="formatar">Formatar e montar partições</h2>
+        <p>Agora vamos formatar as partições criadas:</p>
+        <p><mark>Lembre de subistituir /dev/sd? para as partições que você criou!</mark></p>
+        <ol>
+            <li>Boot: <code>mkfs.fat -F32 /dev/sd?</code></li>
+            <li>Barra: <code>mkfs.ext4 /dev/sd?</code></li>
+            <li>HOME(Caso use separado): <code>mkfs.ext4 /dev/sd?</code></li>
+            <li>SWAP: <code>mkswap /dev/sd?</code></li>
+        </ol>
+        <p>Agora iremos montar as partições e criar alguns diretórios:</p>
+        <ol>
+            <li>Barra: <code>mount /dev/sd? /mnt</code></li>
+            <li>Diretório: <code>mkdir /mnt/home</code></li>
+            <li>HOME: <code>mount /dev/sd? /mnt/home</code></li>
+            <li>Diretório: <code>mkdir /mnt/boot</code></li>
+            <li>Caso use EFI: <code>mkdir /mnt/boot/efi</code></li>
+            <li>Boot LEGACY: <code>mount /dev/sd? /mnt/boot</code></li>
+            <li>Boot EFI: <code>mount /dev/sd? /mnt/boot/efi</code></li>
+            <li>Swap: <code>swapon /dev/sd?</code></li>
+        </ol>
 
-      <h2 id="formatar">Formatar e montar partições</h2>
+        <hr>
+        <h2 id="install">Instalar a base do sistema</h2>
+        <p>Para instalar a base do sistema usamos o seguinte comando:</p>
+        <p><code>pacstrap /mnt base linux linux-firmware bash-completion</code></p>
+        <p>Agora vamos gerar o fstab:</p>
+        <p><code>genfstab -U -p /mnt >> /mnt/etc/fstab</code></p>
+        <p>Verifique se foi gerado corretamente:</p>
+        <p><code>cat /mnt/etc/fstab</code></p>
 
-      <p>Agora vamos formatar as partições criadas:</p>
-      <mark>Lembre de subistituir /dev/sd? para as partições que você criou!</mark>
-      <ol>
-        <li>Boot: <code>mkfs.fat -F32 /dev/sd?</code></li>
-        <li>Barra: <code>mkfs.ext4 /dev/sd?</code></li>
-        <li>HOME(Caso use separado): <code>mkfs.ext4 /dev/sd?</code></li>
-        <li>SWAP: <code>mkswap /dev/sd?</code></li>
-      </ol>
-      <p>Agora iremos montar as partições e criar alguns diretórios:</p>
-      <ol>
-        <li>Barra: <code>mount /dev/sd? /mnt</code></li>
-        <li>Diretório: <code>mkdir /mnt/home</code></li>
-        <li>HOME: <code>mount /dev/sd? /mnt/home</code></li>
-        <li>Diretório: <code>mkdir /mnt/boot</code></li>
-        <li>Caso use EFI: <code>mkdir /mnt/boot/efi</code></li>
-        <li>Boot LEGACY: <code>mount /dev/sd? /mnt/boot</code></li>
-        <li>Boot EFI: <code>mount /dev/sd? /mnt/boot/efi</code></li>
-        <li>Swap: <code>swapon /dev/sd?</code></li>
-      </ol>
+        <hr>
+        <h2 id="so">Entrando no sistema instalado</h2>
+        <p>Para entrar no sitema use:</p>
+        <p><code>arch-chroot /mnt</code></p>
+        <p>Você podera ver que seu terminal mudou isto indica que está dentro do sistema instalado.</p>
+        <p>Vamos mudar a região do relógio para o horario de Brasilia:</p>
+        <p><code>ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime</code></p>
+        <p>Vamos mudar para o relógio UTC:</p>
+        <p><code>hwclock --systohc</code></p>
+        <p>Instale um editor de texto de sua preferência neste caso vou usar o nano:</p>
+        <p><code>pacman -S nano</code></p>
+        <p>Para mudar o idioma do sistema descomente a linha que conter pt_BR.UTF-8 UTF-8 do arquivo /etc/locale.gen:</p>
+        <p><code>nano /etc/locale.gen</code></p>
+        <p>Agora vamos atualizar o idioma:</p>
+        <p><code>locale-gen</code></p>
+        <p>Vamos mudar a lingua padrão do sistema:</p>
+        <p><code>echo LANG=pt-BR.UTF-8 >> /etc/locale.conf</code></p>
+        <p>Mudar o layout do teclado: <code>echo KEYMAP=br-abnt2 >> /etc/vconsole.conf</code></p>
+        <p>Vamos mudar o nome do computador, para isso edite o arquivo /etc/hostname, depois edite o arquivo /etc/hosts e adicione as seguintes linhas:</p>
+        <pre>
+            <code>127.0.0.1 localhost.localdomain localhost</code>
+            <code>::1 localhost.localdomain localhost</code>
+            <code>MEUHOSTNAME.localdomain MEUHOSTNAME</code>
+        </pre>
 
-      <h2 id="install">Instalar a base do sistema</h2>
+        <p><mark>Lembrando de trocar MEUHOSTNAME pelo nome colocado no arquivo hosts</mark></p>
 
-      <p>Para instalar a base do sistema usamos o seguinte comando:
-      <code>pacstrap /mnt base linux linux-firmware bash-completion</code></p>
-      <p>Agora vamos gerar o fstab:
-      <code>genfstab -U -p /mnt >> /mnt/etc/fstab</code></p>
-      <p>Verifique se foi gerado corretamente:
-      <code>cat /mnt/etc/fstab</code></p>
+        <p>Vamos trocar a seha do root com:</p>
+        <p><code>passwd root</code></p>
 
-      <h2 id="entrando">Entrando no sistema instalado</h2>
+        <p>Agora iremos adicionar um usuário:</p>
+        <p><code>useradd -m users -G whell NOME-USR</code></p>
 
-      <p>Para entrar no sitema use: <code>arch-chroot /mnt</code></p>
-      <p>Você podera ver que seu terminal mudou isto indica que está dentro do sistema instalado.</p>
-      <p>Vamos mudar a região do relógio para o horario de Brasilia: <code>ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime</code></p>
-      <p>Vamos mudar para o relógio UTC: <code>hwclock --systohc</code></p>
-      <p>Instale um editor de texto de sua preferência neste caso vou usar o nano: <code>pacman -S nano</code></p>
-      <p>Para mudar o idioma do sistema descomente a linha que conter pt_BR.UTF-8 UTF-8 do arquivo /etc/locale.gen: <code>nano /etc/locale.gen</code></p>
-      <p>Agora vamos atualizar o idioma: <code>locale-gen</code></p>
-      <p>Vamos mudar a lingua padrão do sistema: <code>echo LANG=pt-BR.UTF-8 >> /etc/locale.conf</code></p>
-      <p>Mudar o layout do teclado: <code>echo KEYMAP=br-abnt2 >> /etc/vconsole.conf</code></p>
-      <p>Vamos mudar o nome do computador, para isso edite o arquivo /etc/hostname, depois edite o arquivo /etc/hosts e adicione as seguintes linhas:</p>
-      <pre>
-        <code>127.0.0.1 localhost.localdomain localhost</code>
-        <code>::1 localhost.localdomain localhost</code>
-        <code>MEUHOSTNAME.localdomain MEUHOSTNAME</code>
-      </pre>
+        <p>Alterar senha do usuario:</p>
+        <p><code>passwd NOME-USR</code></p>
 
-      <p><mark>Lembrando de trocar MEUHOSTNAME pelo nome colocado no arquivo hosts</mark></p>
+        <p>Vamos instalar alguns pacotes nessesários:</p>
+        <p><code>pacman -S dosfstools os-prober mtools network-manager-applet networkmanager wpa_supplicant wireless_tools dialog iwd dhcpcd sudo</code></p>
 
-      <p>Vamos trocar a seha do root com: <code>passwd root</code></p>
+        <p>Edite o arquivo /etc/sudoers</p>
+        <p>Procure pela linha que tenha:
+        <p><code>root ALL=(ALL:ALL) ALL</code></p>
+        <p>Adicione abaixo dela:</p>
+        <p><code>NOME-USR ALL=(ALL:ALL) ALL</code></p>
+        <p>Isto fará com que seu usuário possa usar o comando sudo</p>
 
-      <p>Agora iremos adicionar um usuário: <code>useradd -m users -G whell NOME-USR</code></p>
+        <hr>
+        <h2 id="grub">Instalar o GRUB</h2>
 
-      <p>Alterar senha do usuario: <code>passwd NOME-USR</code></p>
+        <h3>Bios Legacy</h3>
+        <p><code>pacman -S grub</code></p>
 
-      <p>Vamos instalar alguns pacotes nessesários: <code>pacman -S dosfstools os-prober mtools network-manager-applet networkmanager wpa_supplicant wireless_tools dialog iwd dhcpcd sudo</code></p>
+        <p><code>grub-install --target=i386-pc --recheck /dev/sd?</code></p>
 
-      <p>Edite o arquivo /etc/sudoers</p>
-      <p>Procure pela linha que tenha <code>root ALL=(ALL:ALL) ALL</code></p> <p>Adicione abaixo dela <code>NOME-USR ALL=(ALL:ALL) ALL</code></p>
-      <p>Isto fará com que seu usuário possa usar o comando sudo</p>
+        <p><code>cp /usr/share/locale/en@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo</code></p>
 
-      <h2 id="grub">Instalar o GRUB</h2>
+        <hr>
+        <h3>EFI</h3>
+        <p><code>pacman -S grub-efi-x86_64 efibootmgr</code></p>
 
-      <h3>Bios Legacy</h3>
-      <p><code>pacman -S grub</code></p>
+        <p><code>grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Arch --recheck</code></p>
 
-      <p><code>grub-install --target=i386-pc --recheck /dev/sd?</code></p>
+        <p><code>cp /usr/share/locale/en@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo</code></p>
 
-      <p><code>cp /usr/share/locale/en@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo</code></p>
+        <hr>
+        <p>Agora vamos gerar o arquivo de configuração do grub:</p>
+        <p><code>grub-mkconfig -o /boot/grub/grub.cfg</code></p>
 
-      <hr>
-      <h3>EFI</h3>
-      <p><code>pacman -S grub-efi-x86_64 efibootmgr</code></p>
+        <p>Antes de reiniciar vamos preparar algumas coisas:</p>
+        <ol type="I">
+            <li>Habilitar NetworkManager: <code>systemctl enable NetworkManager</code></li>
+            <li>Habilitar dhcpcd: <code>systemctl enable dhcpcd</code></li>
+        </ol>
 
-      <p><code>grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Arch --recheck</code></p>
+        <p>Agora digite o comando:</p>
+        <p><code>exit</code></p>
+        <p>Para sair e use:</p>
+        <p><code>reboot</code></p>
+        <p>Para reiniciar e entrar no sistema instalado.</p>
 
-      <p><code>cp /usr/share/locale/en@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo</code></p>
-
-      <hr>
-      <p>Agora vamos gerar o arquivo de configuração do grub: <code>grub-mkconfig -o /boot/grub/grub.cfg</code></p>
-
-      <p>Antes de reiniciar vamos preparar algumas coisas:</p>
-      <ol type="I">
-        <li>Habilitar NetworkManager: <code>systemctl enable NetworkManager</code></li>
-        <li>Habilitar dhcpcd: <code>systemctl enable dhcpcd</code></li>
-      </ol>
-
-      <p>Agora digite o comando: <code>exit</code> para sair e use: <code>reboot</code> para reiniciar e entrar no sistema instalado</p>
-
-      <button onclick="window.location.href='pacman.html'" class="button_ant" style="vertical-align:middle"><span>Anterior</span></button>
-      <button onclick="window.location.href='posinstalacao.html'" class="button_prox" style="vertical-align:middle"><span>Próximo</span></button>
+        <button onclick="window.location.href='pacman.html'" class="button_ant" style="vertical-align:middle"><span>Anterior</span></button>
+        <button onclick="window.location.href='posinstalacao.html'" class="button_prox" style="vertical-align:middle"><span>Próximo</span></button>
     </main>
-    <br>
+
     <footer>
-      <ul class="footer_links" style="list-style-type: none;">
-        <li>
-          <a href="https://github.com/douglasmai4" target="_blank"><img style="width: 50px;" src="../img/github.png" alt="Logomarca do GitHub"></a>
-        </li>
-        <li>
-          <a href="https://t.me/Douglas_Maia" target="_blank"><img style="width: 50px;" src="../img/telegram.png" alt="Logomarca do Telegram"></a>
-        </li>
-        <li>
-          <a href="mailto:douglasmai4@protonmail.com" target="_blank"><img style="width: 50px;" src="../img/email.png" alt="Icone de E-mail"></a>
-        </li>
-        <li><a href="https://www.instagram.com/invites/contact/?i=10opocaxzkeqw&utm_content=4840o3c" target="_blank"><img style="width: 50px;" src="../img/instagram.png" alt="Logomarca do Instagram"></a></li>
-      </ul>
+        <ul>
+            <li><a href="https://github.com/douglasmai4" target="_blank" title="GitHub"><img src="../imgs/github.png" alt="GitHub"></a></li>
+            <li><a href="https://t.me/Douglas_Maia" target="_blank" title="Telegram"><img src="../imgs/telegram.png" alt="Telegram"></a></li>
+            <li><a href="mailto:douglasmai4@protonmail.com" target="_blank" title="Email"><img src="../imgs/email.png" alt="Email"></a></li>
+            <li><a href="https://www.instagram.com/douglas_mai4" target="_blank" title="Instagram"><img src="../imgs/instagram.png" alt="Instagram"></a></li>
+        </ul>
     </footer>
-  </body>
+</body>
 </html>

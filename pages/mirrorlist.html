@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Este site contem um tutorial para a instalação do Arch Linux">
@@ -8,96 +8,98 @@
     <meta name="autor" content="Douglas Maia">
     <meta name="robots" content="index, follow">
     <title>Mirrorlist</title>
-    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <link rel="shortcut icon" href="../imgs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
     <script src="https://kit.fontawesome.com/d6e6e589ec.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <header><img style="width: 25px;" src="../img/logo.png" alt="Logo do Arch Linux com o tema de cores Nord"> DArch</header>
-    <br>
+</head>
+<body>
+    <header>
+        <a href="#">Instalação Arch Linux</a>
+    </header>
     <nav>
-      <div class="Logo"><i class="fa-solid fa-circle-chevron-down"></i>DArch</div>
-      <label for="btn" class="icon">
-        <span class="fa fa-bars"></span>
-      </label>
-      <input type="checkbox" id="btn">
-      <ul>
-        <li><a href="../index.html">Início</a></li>
-        <li><a href="download.html">Download</a></li>
-        <li><a class="active" href="mirrorlist.html">Mirrorlist</a></li>
-        <li>
-          <label for="btn-2" class="show">Pacman +</label>
-          <a href="pacman.html">Pacman</a>
-          <input type="checkbox" id="btn-2">
-          <ul>
-            <li><a href="pacman.html">Início</a></li>
-            <li><a href="pacman.html#utilizar">Como Utilizar</a></li>
-            <li><a href="pacman.html#ativar">Repositórios</a></li>
-          </ul>
-        </li>
-        <li>
-          <label for="btn-3" class="show">Instalação +</label>
-          <a href="instalacao.html">Instalação</a>
-          <input type="checkbox" id="btn-3">
-          <ul>
-            <li><a href="instalacao.html">Início</a></li>
-            <li><a href="instalacao.html#particao">Partições</a></li>
-            <li><a href="instalacao.html#particionar">Particionar</a></li>
-            <li><a href="instalacao.html#formatar">Formatar</a></li>
-            <li><a href="instalacao.html#install">Instalar Base</a></li>
-            <li><a href="instalacao.html#entrando">Entrando SO</a></li>
-            <li><a href="instalacao.html#grub">Instalar GRUB</a></li>
-          </ul>
-        </li>
-        <li><a href="posinstalacao.html">Pós Instalação</a></li>
-        <li>
-          <label for="btn-4" class="show">Interfaces Gráficas +</label>
-          <a href="interface.html">Interfaces Gráficas</a>
-          <input type="checkbox" id="btn-4">
-          <ul>
-            <li><a href="interface.html">Gnome</a></li>
-            <li><a href="interface.html#plasma">Plasma</a></li>
-            <li><a href="interface.html#xfce">XFCE</a></li>
-          </ul>
-        </li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
+        <img src="../imgs/logo.png" alt="Logo">
+        <label for="btn" class="icon">
+            <span class="fa fa-bars"></span>
+        </label>
+        <input type="checkbox" id="btn">
+        <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="download.html">Download</a></li>
+            <li><a class="active" href="#">Mirrorlist</a></li>
+            <li>
+                <label for="btn2" class="show">Pacman <i class="fa-solid fa-circle-plus"></i></label>
+                <a href="pacman.html">Pacman</a>
+                <input type="checkbox" id="btn2">
+                <ul>
+                    <li><a href="pacman.html#utilizar">Como Utilizar</a></li>
+                    <li><a class="last" href="pacman.html#repo">Repositórios</a></li>
+                </ul>
+            </li>
+            <li>
+                <label for="btn3" class="show">Instalação <i class="fa-solid fa-circle-plus"></i></label>
+                <a href="instalacao.html">Instalação</a>
+                <input type="checkbox" id="btn3">
+                <ul>
+                    <li><a href="instalacao.html#particao">Partições</a></li>
+                    <li><a href="instalacao.html#particionar">Particionar</a></li>
+                    <li><a href="instalacao.html#formatar">Formatar</a></li>
+                    <li><a href="instalacao.html#install">Instalar Base</a></li>
+                    <li><a href="instalacao.html#so">Entrando SO</a></li>
+                    <li><a class="last" href="instalacao.html#grub">Instalar GRUB</a></li>
+                </ul>
+            </li>
+            <li><a href="posinstalacao.html">Pós Instalação</a></li>
+            <li>
+                <label for="btn4" class="show">Interfaces Gráficas <i class="fa-solid fa-circle-plus"></i></label>
+                <a href="interface.html">Interfaces Gráficas</a>
+                <input type="checkbox" id="btn4">
+                <ul>
+                    <li><a href="interface.html#gnome">Gnome</a></li>
+                    <li><a href="interface.html#plasma">Plasma</a></li>
+                    <li><a class="last" href="interface.html#xfce">XFCE</a></li>
+                </ul>
+            </li>
+            <li><a href="sobre.html">Sobre</a></li>
+        </ul>
     </nav>
 
     <main>
-      <h1>Mirrorlist</h1>
+        <h1>Mirrorlist</h1>
 
-      <p>Mirrorlist é onde fica a localização dos servidores de onde serão baixados os pacotes instalados pelo <a href="../pages/pacman.html">pacman</a> podemos alteralo de forma bem simples, executando o comando como root: <code>nano /etc/pacman.d/mirrorlist</code> (OBS: aqui irei utilizar o nano mas pode utilizar o editor que preferir), já iremos poder ver os servidores dos pacotes, para atualizar está lista podemos utilizar uma ferramenta do próprio site do Arch chamada <a href="https://archlinux.org/mirrorlist/" target="_blank" rel="nofollow">Pacman Mirrorlist Generator</a>.</p>
+        <p>Mirrorlist é onde fica a localização dos servidores de onde serão baixados os pacotes instalados pelo <a href="../pages/pacman.html">pacman</a> podemos alteralo de forma bem simples, executando o comando como root:</p>
+        <p><code>nano /etc/pacman.d/mirrorlist</code></p>
+        <p>(OBS: aqui irei utilizar o nano mas pode utilizar o editor que preferir), já iremos poder ver os servidores dos pacotes, para atualizar está lista podemos utilizar uma ferramenta do próprio site do Arch chamada <a href="https://archlinux.org/mirrorlist/" target="_blank" rel="nofollow">Pacman Mirrorlist Generator</a>.</p>
 
-      <img src="../img/mirrorlist.png" alt="Página simples com uma lista de países para selecionar de onde será gerada a lista de servidores para o pacman, abaixo da lista temos duas opições de protocolos para serem utilizados HTTP e HTTPS, abaixo detas opições temos também a opição para escolher qual a versão do IP desejamos utilizar, IPv4 ou/e IPv6, mais abaixo temos a opição de utilizar o mirror estatus, e o botão para nos levar à lista gerada." title="Pacman Mirrorlist Generator">
+        <img src="../imgs/mirrorlist.png" alt="Página simples com uma lista de países para selecionar de onde será gerada a lista de servidores para o pacman, abaixo da lista temos duas opições de protocolos para serem utilizados HTTP e HTTPS, abaixo detas opições temos também a opição para escolher qual a versão do IP desejamos utilizar, IPv4 ou/e IPv6, mais abaixo temos a opição de utilizar o mirror estatus, e o botão para nos levar à lista gerada." title="Pacman Mirrorlist Generator">
 
-      <p>Recomendo marcar a opição de utilizar mirrorlist status para que você tenhas certeza de que os links estejam funcioando</p>
-      <p>Após clicar em gerar lista você terá uma tela semelhante a está:</p>
+        <p>Recomendo marcar a opição de utilizar mirrorlist status para que você tenhas certeza de que os links estejam funcioando</p>
+        <p>Após clicar em gerar lista você terá uma tela semelhante a está:</p>
 
-      <img src="../img/mirror.png" alt="Resultado gerado, uma lista com links e comentário informando que são do Brasil" title="Mirrorlist">
+        <img src="../imgs/mirror.png" alt="Resultado gerado, uma lista com links e comentário informando que são do Brasil" title="Mirrorlist">
 
-      <p>Agora é somente copiar todas as linha e copialas para o arquivo /etc/pacman.d/mirrorlist, caso esteja na instalação do Arch e não possua interface gráfica você pode usar o lynx.</p>
-      <p>Para isso execute o comando: <code>lynx https://archlinux.org/mirrorlist</code> e selecione as opições como faria em qualquer navegador, após ter gerado a mirrolist, precione P no teclado, selecione a opição para salvar local, e mude o nome para um nome fácil para você lembrar depois, agora execute o seguinte comando como root: <code>cat NOME_DO_ARQUIVO > /etc/pacman.d/mirrolist</code>, <mark>não se esqueça de descomentar todos os servidores para que tudo funcione normalmente.</mark></p>
+        <p>Agora é somente copiar todas as linha e copialas para o arquivo /etc/pacman.d/mirrorlist, caso esteja na instalação do Arch e não possua interface gráfica você pode usar o lynx.</p>
+        <p>Para isso execute o comando:</p>
+        <p><code>lynx https://archlinux.org/mirrorlist</code></p>
+        <p>e selecione as opições como faria em qualquer navegador, após ter gerado a mirrolist, precione P no teclado, selecione a opição para salvar local, e mude o nome para um nome fácil para você lembrar depois, agora execute o seguinte comando como root:</p>
+        <p><code>cat NOME_DO_ARQUIVO > /etc/pacman.d/mirrolist</code></p>
+        <br>
+        <p><mark>não se esqueça de descomentar todos os servidores para que tudo funcione normalmente.</mark></p>
 
-      <p>Após ter modificado o arquivo MIRRORLIST, precisamos atualizar a lista de pacotes do Arch executando o seguinte comando como root: <code>pacman -Sy</code>, se você fez corretamente tudo deve estar funcionando.</p>
+        <p>Após ter modificado o arquivo MIRRORLIST, precisamos atualizar a lista de pacotes do Arch executando o seguinte comando como root:</p>
+        <p><code>pacman -Sy</code></p>
+        <p>Se você fez corretamente tudo deve estar funcionando.</p>
 
-      <button onclick="window.location.href='download.html'" class="button_ant" style="vertical-align:middle"><span>Anterior</span></button>
-      <button onclick="window.location.href='pacman.html'" class="button_prox" style="vertical-align:middle"><span>Próximo</span></button>
+        <button onclick="window.location.href='download.html'" class="button_ant" style="vertical-align:middle"><span>Anterior</span></button>
+        <button onclick="window.location.href='pacman.html'" class="button_prox" style="vertical-align:middle"><span>Próximo</span></button>
     </main>
-    <br>
+
     <footer>
-      <ul class="footer_links" style="list-style-type: none;">
-        <li>
-          <a href="https://github.com/douglasmai4" target="_blank"><img style="width: 50px;" src="../img/github.png" alt="Logomarca do GitHub"></a>
-        </li>
-        <li>
-          <a href="https://t.me/Douglas_Maia" target="_blank"><img style="width: 50px;" src="../img/telegram.png" alt="Logomarca do Telegram"></a>
-        </li>
-        <li>
-          <a href="mailto:douglasmai4@protonmail.com" target="_blank"><img style="width: 50px;" src="../img/email.png" alt="Icone de E-mail"></a>
-        </li>
-        <li><a href="https://www.instagram.com/invites/contact/?i=10opocaxzkeqw&utm_content=4840o3c" target="_blank"><img style="width: 50px;" src="../img/instagram.png" alt="Logomarca do Instagram"></a></li>
-      </ul>
+        <ul>
+            <li><a href="https://github.com/douglasmai4" target="_blank" title="GitHub"><img src="../imgs/github.png" alt="GitHub"></a></li>
+            <li><a href="https://t.me/Douglas_Maia" target="_blank" title="Telegram"><img src="../imgs/telegram.png" alt="Telegram"></a></li>
+            <li><a href="mailto:douglasmai4@protonmail.com" target="_blank" title="Email"><img src="../imgs/email.png" alt="Email"></a></li>
+            <li><a href="https://www.instagram.com/douglas_mai4" target="_blank" title="Instagram"><img src="../imgs/instagram.png" alt="Instagram"></a></li>
+        </ul>
     </footer>
-  </body>
+</body>
 </html>

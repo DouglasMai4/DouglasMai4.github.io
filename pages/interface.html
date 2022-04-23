@@ -1,114 +1,114 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Este site contem um tutorial para a instalação do Arch Linux">
     <meta name="keywords" content="Arch, Linux, Instalação, Dicas, Canoinhas, SC, Brasil">
     <meta name="autor" content="Douglas Maia">
     <meta name="robots" content="index, follow">
-    <title>Interface Gráfica</title>
-    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <title>Insterfaces Gráficas</title>
+    <link rel="shortcut icon" href="../imgs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
     <script src="https://kit.fontawesome.com/d6e6e589ec.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <header><img style="width: 25px;" src="../img/logo.png" alt="Logo do Arch Linux com o tema de cores Nord"> DArch</header>
-    <br>
+</head>
+<body>
+    <header>
+        <a href="#">Instalação Arch Linux</a>
+    </header>
     <nav>
-      <div class="Logo"><i class="fa-solid fa-circle-chevron-down"></i>DArch</div>
-      <label for="btn" class="icon">
-        <span class="fa fa-bars"></span>
-      </label>
-      <input type="checkbox" id="btn">
-      <ul>
-        <li><a href="../index.html">Início</a></li>
-        <li><a href="download.html">Download</a></li>
-        <li><a href="mirrorlist.html">Mirrorlist</a></li>
-        <li>
-          <label for="btn-2" class="show">Pacman +</label>
-          <a href="pacman.html">Pacman</a>
-          <input type="checkbox" id="btn-2">
-          <ul>
-            <li><a href="pacman.html">Início</a></li>
-            <li><a href="pacman.html#utilizar">Como Utilizar</a></li>
-            <li><a href="pacman.html#ativar">Repositórios</a></li>
-          </ul>
-        </li>
-        <li>
-          <label for="btn-3" class="show">Instalação +</label>
-          <a href="instalacao.html">Instalação</a>
-          <input type="checkbox" id="btn-3">
-          <ul>
-            <li><a href="instalacao.html">Início</a></li>
-            <li><a href="instalacao.html#particao">Partições</a></li>
-            <li><a href="instalacao.html#particionar">Particionar</a></li>
-            <li><a href="instalacao.html#formatar">Formatar</a></li>
-            <li><a href="instalacao.html#install">Instalar Base</a></li>
-            <li><a href="instalacao.html#entrando">Entrando SO</a></li>
-            <li><a href="instalacao.html#grub">Instalar GRUB</a></li>
-          </ul>
-        </li>
-        <li><a href="posinstalacao.html">Pós Instalação</a></li>
-        <li>
-          <label for="btn-4" class="show">Interfaces Gráficas +</label>
-          <a class="active" href="#">Interfaces Gráficas</a>
-          <input type="checkbox" id="btn-4">
-          <ul>
-            <li><a href="interface.html">Gnome</a></li>
-            <li><a href="interface.html#plasma">Plasma</a></li>
-            <li><a href="interface.html#xfce">XFCE</a></li>
-          </ul>
-        </li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
+        <img src="../imgs/logo.png" alt="Logo">
+        <label for="btn" class="icon">
+            <span class="fa fa-bars"></span>
+        </label>
+        <input type="checkbox" id="btn">
+        <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="mirrorlist.html">Mirrorlist</a></li>
+            <li>
+                <label for="btn2" class="show">Pacman <i class="fa-solid fa-circle-plus"></i></label>
+                <a href="pacman.html">Pacman</a>
+                <input type="checkbox" id="btn2">
+                <ul>
+                    <li><a href="pacman.html#utilizar">Como Utilizar</a></li>
+                    <li><a class="last" href="pacman.html#repo">Repositórios</a></li>
+                </ul>
+            </li>
+            <li>
+                <label for="btn3" class="show">Instalação <i class="fa-solid fa-circle-plus"></i></label>
+                <a href="instalacao.html">Instalação</a>
+                <input type="checkbox" id="btn3">
+                <ul>
+                    <li><a href="instalacao.html#particao">Partições</a></li>
+                    <li><a href="instalacao.html#particionar">Particionar</a></li>
+                    <li><a href="instalacao.html#formatar">Formatar</a></li>
+                    <li><a href="instalacao.html#install">Instalar Base</a></li>
+                    <li><a href="instalacao.html#so">Entrando SO</a></li>
+                    <li><a class="last" href="instalacao.html#grub">Instalar GRUB</a></li>
+                </ul>
+            </li>
+            <li><a href="posinstalacao.html">Pós Instalação</a></li>
+            <li>
+                <label for="btn4" class="show-active">Interfaces Gráficas <i class="fa-solid fa-circle-plus"></i></label>
+                <a class="active" href="#">Interfaces Gráficas</a>
+                <input type="checkbox" id="btn4">
+                <ul>
+                    <li><a href="interface.html#gnome">Gnome</a></li>
+                    <li><a href="interface.html#plasma">Plasma</a></li>
+                    <li><a class="last" href="interface.html#xfce">XFCE</a></li>
+                </ul>
+            </li>
+            <li><a href="sobre.html">Sobre</a></li>
+        </ul>
     </nav>
 
     <main>
-      <h1 id="interface">Interfaces Gráficas</h1>
-      <h2 id="gnome">GNOME</h2>
-      <p>Vamos instalar o gerenciador de login: <code>pacman -S gdm</code></p>
+        <h1 id="gnome">GNOME</h1>
+        <p>Vamos instalar o gerenciador de login:</p>
+        <p><code>pacman -S gdm</code></p>
 
-      <p>Agora vamos ativar para iniciar com o sistema: <code>systemctl enable gdm</code></p>
+        <p>Agora vamos ativar para iniciar com o sistema:</p>
+        <p><code>systemctl enable gdm</code></p>
 
-      <p>Vamos instalar o gnome e seus apps: <code>pacman -S gnome gnome-terminal nautilus gnome-tweaks gnome-control-center gnome-backgrounds adwaita-icon-theme</code></p>
-      <hr>
+        <p>Vamos instalar o gnome e seus apps:</p>
+        <p><code>pacman -S gnome gnome-terminal nautilus gnome-tweaks gnome-control-center gnome-backgrounds adwaita-icon-theme</code></p>
+        
+        <hr>
+        <h2 id="plasma">Plasma</h2>
+        <p>Vamos instalar o gerenciador de login:</p>
+        <p><code>pacman -S sddm</code></p>
 
-      <h2 id="plasma">Plasma</h2>
-      <p>Vamos instalar o gerenciador de login: <code>pacman -S sddm</code></p>
+        <p>Agora vamos ativar para iniciar com o sistema:</p>
+        <p><code>systemctl enable sddm</code></p>
 
-      <p>Agora vamos ativar para iniciar com o sistema: <code>systemctl enable sddm</code></p>
+        <p>Vamos instalar o plasma e seus apps:</p>
+        <p><code>pacman -S plama konsole dolphin gwenview elisa dragonplayer ark kcalc kwrite</code></p>
 
-      <p>Vamos instalar o plasma e seus apps: <code>pacman -S plama konsole dolphin gwenview elisa dragonplayer ark kcalc kwrite</code></p>
-      <hr>
+        <hr>
+        <h2 id="xfce">XFCE</h2>
+        <p>Vamos instalar o gerenciador de login:</p>
+        <p><code>pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings</code></p>
 
-      <h2 id="xfce">XFCE</h2>
-      <p>Vamos instalar o gerenciador de login: <code>pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings</code></p>
+        <p>Agora vamos ativar para iniciar com o sistema:</p>
+        <p><code>systemctl enable lightdm</code></p>
 
-      <p>Agora vamos ativar para iniciar com o sistema: <code>systemctl enable lightdm</code></p>
+        <p>Vamos instalar o xfce e seus apps:</p>
+        <p><code>pacman -S xfce4 xfce4-goodies xfce4-terminal xfce4-whiskermenu-plugin</code></p>
+        
+        <p><mark>Não esqueça de instalar um navegador como o firefox por exemplo.</mark></p>
 
-      <p>Vamos instalar o xfce e seus apps: <code>pacman -S xfce4 xfce4-goodies xfce4-terminal xfce4-whiskermenu-plugin</code></p>
-      <hr>
-
-      <p><mark>Não esqueça de instalar um navegador como o firefox por exemplo.</mark></p>
-
-      <button onclick="window.location.href='posinstalacao.html'" class="button_ant" style="vertical-align:middle"><span>Anterior</span></button>
-      <button onclick="window.location.href='contato.html'" class="button_prox" style="vertical-align:middle"><span>Próximo</span></button>
+        <button onclick="window.location.href='posinstalacao.html'" class="button_ant" style="vertical-align:middle"><span>Anterior</span></button>
+        <button onclick="window.location.href='sobre.html'" class="button_prox" style="vertical-align:middle"><span>Próximo</span></button>
     </main>
-    <br>
+
     <footer>
-      <ul class="footer_links" style="list-style-type: none;">
-        <li>
-          <a href="https://github.com/douglasmai4" target="_blank"><img style="width: 50px;" src="../img/github.png" alt="Logomarca do GitHub"></a>
-        </li>
-        <li>
-          <a href="https://t.me/Douglas_Maia" target="_blank"><img style="width: 50px;" src="../img/telegram.png" alt="Logomarca do Telegram"></a>
-        </li>
-        <li>
-          <a href="mailto:douglasmai4@protonmail.com" target="_blank"><img style="width: 50px;" src="../img/email.png" alt="Icone de E-mail"></a>
-        </li>
-        <li><a href="https://www.instagram.com/invites/contact/?i=10opocaxzkeqw&utm_content=4840o3c" target="_blank"><img style="width: 50px;" src="../img/instagram.png" alt="Logomarca do Instagram"></a></li>
-      </ul>
+        <ul>
+            <li><a href="https://github.com/douglasmai4" target="_blank" title="GitHub"><img src="../imgs/github.png" alt="GitHub"></a></li>
+            <li><a href="https://t.me/Douglas_Maia" target="_blank" title="Telegram"><img src="../imgs/telegram.png" alt="Telegram"></a></li>
+            <li><a href="mailto:douglasmai4@protonmail.com" target="_blank" title="Email"><img src="../imgs/email.png" alt="Email"></a></li>
+            <li><a href="https://www.instagram.com/douglas_mai4" target="_blank" title="Instagram"><img src="../imgs/instagram.png" alt="Instagram"></a></li>
+        </ul>
     </footer>
-  </body>
+</body>
 </html>

@@ -7,7 +7,7 @@
     <meta name="keywords" content="Arch, Linux, Instalação, Dicas, Canoinhas, SC, Brasil">
     <meta name="autor" content="Douglas Maia">
     <meta name="robots" content="index, follow">
-    <title>Pós Instalação</title>
+    <title>Sobre</title>
     <link rel="shortcut icon" href="../imgs/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style.css">
     <script src="https://kit.fontawesome.com/d6e6e589ec.js" crossorigin="anonymous"></script>
@@ -48,9 +48,9 @@
                     <li><a class="last" href="instalacao.html#grub">Instalar GRUB</a></li>
                 </ul>
             </li>
-            <li><a class="active" href="#">Pós Instalação</a></li>
+            <li><a href="posinstalacao.html">Pós Instalação</a></li>
             <li>
-                <label for="btn4" class="show">Interfaces Gráficas <i class="fa-solid fa-circle-plus"></i></label>
+                <label for="btn4" class="show-active">Interfaces Gráficas <i class="fa-solid fa-circle-plus"></i></label>
                 <a href="interface.html">Interfaces Gráficas</a>
                 <input type="checkbox" id="btn4">
                 <ul>
@@ -59,58 +59,19 @@
                     <li><a class="last" href="interface.html#xfce">XFCE</a></li>
                 </ul>
             </li>
-            <li><a href="sobre.html">Sobre</a></li>
+            <li><a class="active" href="#">Sobre</a></li>
         </ul>
     </nav>
 
     <main>
-        <h1>Conectar ao Wifi</h1>
-        <p>Antes de usarmos o <em>iwctl</em></p>
+        <img class="foto" src="../imgs/foto.png" alt="Foto do criador do site" title="Douglas Maia">
 
-        <p>Precisamos iniciar o <em>iwd</em>:</p>
-        <p><code>systemctl start iwd</code></p>
-
-        <p>Agora podemos nos conectar como já haviamos feito antes com o iwctl</p>
-
-        <hr>
-        <h2>Xorg e drivers</h2>
-        <p>Primeiro atualize a lista de pacotes:</p>
-        <p><code>pacman -Sy</code></p>
-        <p>Agora vamos instalar o xorg:</p>
-        <p><code>xorg-server</code></p>
-        <p>Lista dos drivers de vídeo de cada fabricante, escolha o seu e instale usando o pacman</p>
-
-        <table>
-            <thead>
-            <tr>
-                <th>Pacote</th>
-                <th>Descrição</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>xf86-video-intel libgl mesa</td>
-                <td>Drivers de vídeo para processadores INTEL</td>
-            </tr>
-            <tr>
-                <td>nvidia nvidia-libgl mesa</td>
-                <td>Drivers de vídeo para placas de vídeo NVIDIA</td>
-            </tr>
-            <tr>
-                <td>mesa xf86-video-amdgpu</td>
-                <td>Drivers de vídeo para processadores AMD</td>
-            </tr>
-            <tr>
-                <td>virtualbox-guest-utils virtualbox-host-modules-arch mesa mesa-libgl</td>
-                <td>Drivers de vídeo para máquinas virtuais</td>
-            </tr>
-            </tbody>
-        </table>
-
-        <p>Recomendo instalar o pacote haveged para que o sistema inicie mais rápido.</p>
-
-        <button onclick="window.location.href='instalacao.html'" class="button_ant" style="vertical-align:middle"><span>Anterior</span></button>
-        <button onclick="window.location.href='interface.html'" class="button_prox" style="vertical-align:middle"><span>Próximo</span></button>
+        <h2>Douglas Maia</h2>
+        <p>Me chamo Douglas Maia, estou no ultimo modulo do curso de Manutenção e Suporte em Informática no IFSC - Canoinhas</p>
+        <p>Este site foi feito para a matéria de Tecnologias para a Web, o seu intuito é auxiliar pessoas com pouca experiência à instalar o Arch Linux</p>
+        <p>Pretendo sempre manter o site atualizado e funcionando</p>
+        <p>Abaixo possuí alguns links para que possa entrar em contato comigo caso deseje</p>
+        <p><i class="fa-solid fa-circle-arrow-down"></i></i></p>
     </main>
 
     <footer>
