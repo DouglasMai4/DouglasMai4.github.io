@@ -1,0 +1,339 @@
+* {
+	font-family: comfortaa;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* ----- Variveis ----- */
+:root {
+	--cor-body:  #6096ba;
+	--cor-sidebar: #a3cef1;
+	--cor-primaria: #274c77;
+	--cor-primaria-clara: #6096ba;
+	--cor-toggle: #002255;
+	--cor-texto: #002255;
+
+	/* ----- Transicao ----- */
+	--tran-02: all 0.2s ease;
+	--tran-03: all 0.3s ease;
+	--tran-04: all 0.4s ease;
+	--tran-05: all 0.5s ease;
+}
+
+body {
+	height: 100vh;
+	background-color: var(--cor-body);
+	transition: var(--tran-05);
+}
+
+body.dark {
+	--cor-body: #001f54;
+    --cor-sidebar: #0a1128;
+    --cor-primaria: #034078;
+    --cor-primaria-clara: #001f54;
+    --cor-toggle: #0267c1;
+    --cor-texto: #0267c1;
+}
+/* -------------------- */
+
+/* ----- SideBar ----- */
+.sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 250px;
+	padding: 10px 14px;
+	background-color: var(--cor-sidebar);
+	transition: var(--tran-05);
+	z-index: 100;
+}
+
+.sidebar.close {
+	width: 88px;
+}
+/* ------------------- */
+
+/* ----- CSS Reutilizavel ----- */
+.sidebar text {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--cor-texto);
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar.close .text {
+    transition: var(--tran-05);
+    opacity: 0;
+}
+
+.sidebar .image {
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar li {
+    height: 50px;
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    font-size: 20px;
+}
+
+.sidebar li .icon,
+.sidebar li .text {
+    color: var(--cor-texto);
+    transition: var(--tran-02);
+}
+
+.sidebar header {
+    position: relative;
+}
+
+.sidebar .image-text img {
+    width: 40px;
+    border-radius: 6px;
+}
+
+.sidebar header .image-text {
+    display: flex;
+    align-items: center;
+}
+
+header .image-text .header-text {
+    display: flex;
+    flex-direction: column;
+    color: var(--cor-texto);
+    transition: var(--tran-05);
+}
+
+.header-text .name {
+    font-weight: 600;
+}
+
+.header-text .profession {
+    margin-top: -2px;
+}
+
+.sidebar header .toggle {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%) rotate(180deg);
+    height: 25px;
+    width: 25px;
+    background: var(--cor-primaria);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--cor-sidebar);
+    font-size: 22px;
+    transition: var(--tran-03);
+}
+
+.sidebar header .toggle::before {
+    color: var(--cor-sidebar);
+}
+
+.sidebar.close header .toggle {
+    transform: translateY(-50%);
+}
+
+body.dark .sidebar header .toggle {
+    color: var(--cor-texto);
+}
+
+.sidebar .menu {
+    margin-top: 35px;
+}
+
+.sidebar li a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: var(--tran-04);
+}
+
+.sidebar li a:hover {
+    background: var(--cor-primaria);
+}
+
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text {
+    color: var(--cor-sidebar);
+}
+
+body.dark .sidebar li a:hover .icon,
+body.dark .sidebar li a:hover .text {
+    color: var(--cor-sidebar);
+}
+
+.sidebar .menu-bar {
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+}
+
+.menu-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.menu-bar .mode {
+    position: relative;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    background-color: var(--cor-primaria-clara);
+    transition: var(--tran-05);
+}
+
+.menu-bar .mode .moon-sun {
+    height: 50px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+}
+.menu-bar .mode i {
+    position: absolute;
+    transition: var(--tran-03);
+}
+
+.menu-bar .mode i.sun {
+    opacity: 0;
+}
+
+body.dark .menu-bar .mode i.sun {
+    opacity: 1;
+}
+
+body.dark .menu-bar .mode i.moon {
+    opacity: 0;
+}
+
+.menu-bar .mode .toggle-switch {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-width: 60px;
+    cursor: pointer;
+    border-radius: 6px;
+    background: var(--cor-primaria-clara);
+    transition: var(--tran-05);
+}
+
+.toggle-switch .switch {
+    position: relative;
+    height: 22px;
+    width: 44px;
+    border-radius: 25px;
+    background: var(--cor-toggle);
+    transition: var(--tran-05);
+}
+
+.switch::before {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background: var(--cor-sidebar);
+    transition: var(--tran-03);
+}
+
+body.dark .switch::before {
+    left: 24px;
+
+}
+
+.home {
+    position: relative;
+    height: 100vh;
+    left: 250px;
+    width: calc(100% - 250px);
+    background: var(--cor-body);
+    transition: var(--tran-05);
+}
+
+.home .text {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--cor-texto);
+    padding: 8px 40px;
+}
+
+.sidebar.close ~ .home {
+    left: 88px;
+    width: calc(100% - 88px);
+}
+
+@media screen and (max-width: 700px) {
+    .home.hide {
+        opacity: 0;
+    }
+    .home.show {
+        opacity: 1;
+    }
+}
+
+.msg-alertas {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.ms {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    display: block;
+    font-size: 16px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.ms.info {
+    background-color: var(--cor-sidebar);
+    color: var(--cor-texto);
+    border-radius: 6px;
+    font-size: 20px;
+    transition: var(--tran-04);
+}
+.ms.info a {
+    color: var(--cor-texto);
+    text-decoration-color: var(--cor-primaria-clara);
+    transition: var(--tran-04);
+}
+
+.ms.info a:hover {
+    color: var(--cor-primaria-clara);
+    text-decoration-color: var(--cor-texto);
+    transition: var(--tran-04);
+}
+
+.ms.info .close-btn {
+    float: right;
+}
