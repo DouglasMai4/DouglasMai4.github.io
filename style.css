@@ -273,6 +273,7 @@ body.dark .switch::before {
 }
 
 .home {
+    margin-top: 25px;
     position: relative;
     height: 100vh;
     left: 250px;
