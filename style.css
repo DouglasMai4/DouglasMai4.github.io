@@ -273,7 +273,6 @@ body.dark .switch::before {
 }
 
 .home {
-    margin-top: 25px;
     position: relative;
     height: 100vh;
     left: 250px;
@@ -289,9 +288,116 @@ body.dark .switch::before {
     padding: 8px 40px;
 }
 
+.home h2 {
+	font-size: 30px;
+	margin-left: 10px;
+}
+
+.home a {
+	text-decoration: none;
+	color: var(--cor-texto);
+}
+
 .sidebar.close ~ .home {
     left: 88px;
     width: calc(100% - 88px);
+}
+
+/* Skill Progress */
+.container {
+  position: relative;
+  max-width: 1000px;
+  width: 100%;
+  background: var(--cor-sidebar);
+  margin: auto;
+  padding: 10px 20px;
+  border-radius: 7px;
+}
+
+.container .skill-box {
+  width: 100%;
+  margin: 25px 0;
+}
+
+.skill-box .title {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--cor-texto);
+}
+
+.skill-box .skill-bar {
+  height: 8px;
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 6px;
+  background: var(--cor-body);
+}
+
+.skill-bar .skill-per {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 90%;
+  border-radius: 6px;
+  background: var(--cor-toggle);
+  animation: progress 0.4s ease-in-out forwards;
+  opacity: 0;
+}
+
+.logo {
+  font-size: 25px;
+}
+
+.skill-per.css {
+	width: 85%;
+	animation-delay: 0.1s
+}
+
+.skill-per.shell {
+  width: 80%;
+  animation-delay: 0.2s;
+}
+
+.skill-per.python {
+  width: 70%;
+  animation-delay: 0.3s;
+}
+
+.skill-per.c {
+  width: 40%;
+  animation-delay: 0.4s;
+}
+
+.skill-per.js {
+  width: 20%;
+  animation-delay: 0.5s;
+}
+
+@keyframes progress {
+  0%{
+    width: 0;
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.skill-per .tooltip {
+	position: absolute;
+	right: -14px;
+	top: -3px;
+	font-size: 9px;
+	font-weight: 500;
+	color: var(--cor-body);
+	padding: 2px 6px;
+	border-radius: 3px;
+	background-color: var(--cor-toggle);
+}
+
+body.dark .skill-per .tooltip {
+	color: var(--cor-texto);
 }
 
 @media screen and (max-width: 700px) {
