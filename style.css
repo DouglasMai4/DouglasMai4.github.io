@@ -61,7 +61,7 @@ body.dark {
 
 /* ----- CSS Reutilizavel ----- */
 .sidebar text {
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 500;
     color: var(--cor-texto);
     white-space: nowrap;
@@ -93,7 +93,7 @@ body.dark {
     align-items: center;
     justify-content: center;
     min-width: 60px;
-    font-size: 20px;
+    font-size: 1.5em;
 }
 
 .sidebar li .icon,
@@ -144,7 +144,7 @@ header .image-text .header-text {
     justify-content: center;
     border-radius: 50%;
     color: var(--cor-sidebar);
-    font-size: 22px;
+    font-size: 1.5em;
     transition: var(--tran-03);
 }
 
@@ -232,81 +232,81 @@ body.dark .menu-bar .mode i.moon {
 }
 
 .menu-bar .mode .toggle-switch {
-    position: absolute;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    min-width: 60px;
-    cursor: pointer;
-    border-radius: 6px;
-    background: var(--cor-primaria-clara);
-    transition: var(--tran-05);
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-width: 60px;
+  cursor: pointer;
+  border-radius: 6px;
+  background: var(--cor-primaria-clara);
+  transition: var(--tran-05);
 }
 
 .toggle-switch .switch {
-    position: relative;
-    height: 22px;
-    width: 44px;
-    border-radius: 25px;
-    background: var(--cor-toggle);
-    transition: var(--tran-05);
+  position: relative;
+  height: 22px;
+  width: 44px;
+  border-radius: 25px;
+  background: var(--cor-toggle);
+  transition: var(--tran-05);
 }
 
 .switch::before {
-    content: '';
-    position: absolute;
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    background: var(--cor-sidebar);
-    transition: var(--tran-03);
+  content: '';
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  background: var(--cor-sidebar);
+  transition: var(--tran-03);
 }
 
 body.dark .switch::before {
-    left: 24px;
+  left: 24px;
 
 }
 
 .home {
-    position: relative;
-    height: 100vh;
-    left: 250px;
-    width: calc(100% - 250px);
-    background: var(--cor-body);
-    transition: var(--tran-05);
+  position: relative;
+  height: 100vh;
+  left: 250px;
+  width: calc(100% - 250px);
+  background: var(--cor-body);
+  transition: var(--tran-05);
 }
 
 .home .text {
-    font-size: 30px;
-    font-weight: 500;
-    color: var(--cor-texto);
-    padding: 8px 40px;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: var(--cor-texto);
+  padding: 8px 40px;
 }
 
 .home h2 {
-	font-size: 30px;
+	font-size: 1.2em;
 	margin-left: 10px;
 }
 
 .home a {
-	text-decoration: none;
-	color: var(--cor-texto);
+text-decoration: none;
+color: var(--cor-texto);
 }
 
 .sidebar.close ~ .home {
-    left: 88px;
-    width: calc(100% - 88px);
+  left: 88px;
+  width: calc(100% - 88px);
 }
 
 /* Skill Progress */
 .container {
   position: relative;
-  max-width: 1000px;
+  max-width: 80%;
   width: 100%;
   background: var(--cor-sidebar);
   margin: auto;
@@ -321,7 +321,7 @@ body.dark .switch::before {
 
 .skill-box .title {
   display: block;
-  font-size: 20px;
+  font-size: 1em;
   font-weight: 600;
   color: var(--cor-texto);
 }
@@ -346,7 +346,7 @@ body.dark .switch::before {
 }
 
 .logo {
-  font-size: 25px;
+  font-size: 1.5em;
 }
 
 .skill-per.css {
@@ -388,7 +388,7 @@ body.dark .switch::before {
 	position: absolute;
 	right: -14px;
 	top: -3px;
-	font-size: 9px;
+	font-size: .3em;
 	font-weight: 500;
 	color: var(--cor-body);
 	padding: 2px 6px;
@@ -401,12 +401,12 @@ body.dark .skill-per .tooltip {
 }
 
 @media screen and (max-width: 700px) {
-    .home.hide {
-        opacity: 0;
-    }
-    .home.show {
-        opacity: 1;
-    }
+  .home.hide {
+    opacity: 0;
+  }
+  .home.show {
+    opacity: 1;
+  }
 }
 
 .msg-alertas {
@@ -421,7 +421,7 @@ body.dark .skill-per .tooltip {
     margin: auto;
     padding: 10px;
     display: block;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 100;
     text-align: center;
 }
@@ -435,16 +435,66 @@ body.dark .skill-per .tooltip {
 }
 .ms.info a {
     color: var(--cor-texto);
-    text-decoration-color: var(--cor-primaria-clara);
+		text-decoration: underline;
+    text-decoration-color: var(--cor-body);
     transition: var(--tran-04);
 }
 
 .ms.info a:hover {
-    color: var(--cor-primaria-clara);
+    color: var(--cor-body);
     text-decoration-color: var(--cor-texto);
     transition: var(--tran-04);
 }
 
 .ms.info .close-btn {
     float: right;
+}
+
+.contato {
+	display: inline-flex;
+	font-size: 1.5em;
+	background-color: var(--cor-sidebar);
+	border-radius: 6px;
+	padding: 10px;
+	color: var(--cor-texto);
+	margin: 10px;
+}
+
+.contato a {
+	background: none;
+	margin: 10px;
+}
+
+.contato a:hover {
+	transform: scale(1.5, 1.5);
+	margin-left: 10px;
+	margin-right: 10px;
+	border: 1px solid var(--cor-texto);
+	background-color: var(--cor-sidebar);
+	border-radius: 6px;
+}
+
+[aria-label] {
+	position: relative;
+}
+
+[aria-label]::after {
+	content: attr(aria-label);
+	display: none;
+	position: absolute;
+	top: 110%;
+	left: 0px;
+	z-index: 5000;
+	pointer-events: none;
+	padding: 8px 10px;
+	text-decoration: none;
+	font-size: .3em;
+	color: var(--cor-texto);
+	background-color: var(--cor-sidebar);
+	border-radius: 6px;
+	border: 1px solid var(--cor-texto)
+}
+
+[aria-label]:hover::after {
+	display: block;
 }
