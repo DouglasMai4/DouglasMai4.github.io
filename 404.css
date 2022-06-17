@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Comfortaa', Arial;
+    font-size: 1em;
+    background: #3E505B;
+    color: #C6D8D3;
+}
+
+#main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #192024;
+    padding: 80px;
+    border-radius: 10px;
+    max-width: max-content;
+    text-align: center;
+    box-shadow: 0 0 10px #111518;
+}
+
+#main h1, div h2 {
+    text-shadow: 0 0 10px #111518;
+}
+
+.icon {
+    font-size: 2em;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #111518;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    background: #C6D8D3;
+    color: #192024;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #111518;
+    display: table;
+}
